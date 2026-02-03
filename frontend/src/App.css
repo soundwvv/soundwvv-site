@@ -1,34 +1,267 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* SOUNDWVV Custom Styles - Based on Bigfish Design System */
+
+:root {
+  /* Foundation Colors */
+  --color-black: #151515;
+  --color-white: #fff;
+  --color-dark-grey: #717171;
+  --color-mid-grey: #aaa;
+  --color-grey: #b6cbcb;
+  
+  /* Vibrant Brand Colors */
+  --color-dark-blue: #1f47e6;
+  --color-mid-blue: #88a2ff;
+  --color-light-blue: #b7fbff;
+  --color-mid-pink: #ff84e4;
+  --color-light-pink: #ffd1e7;
+  --color-mid-purple: #d987ff;
+  --color-mid-yellow: #ffe03d;
+  --color-light-yellow: #f6fd87;
+  --color-dark-orange: #d1903a;
+  --color-mid-orange: #ff965a;
+  --color-dark-green: #a1a500;
+  --color-mid-green: #78d692;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Typography Classes */
+.brand-display {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 800;
+  font-size: clamp(4.5rem, 8vw, 10rem);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
 
-.App-link {
-    color: #61dafb;
+.section-heading {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1.125;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.card-heading {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  line-height: 1.375;
+}
+
+.body-large {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.45;
+}
+
+.body-medium {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.body-small {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.caption {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+/* Component Styles */
+.service-button {
+  background: var(--color-mid-purple);
+  color: var(--color-black);
+  border: 1px solid var(--color-mid-purple);
+  border-radius: 9999px;
+  padding: 0.25rem 0.5rem;
+  font-family: 'Inter', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.0875em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.service-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(217, 135, 255, 0.3);
+}
+
+.nav-link {
+  color: var(--color-mid-grey);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+  border-radius: 0px;
+  padding: 0;
+  transition: color 0.15s ease;
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: var(--color-white);
+}
+
+.nav-link:focus {
+  outline: 2px solid var(--color-light-pink);
+  outline-offset: 2px;
+}
+
+.cta-button {
+  background: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 9999px;
+  padding: 0.625rem 1.375rem;
+  font-family: 'Inter', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.0875em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: #2a2a2a;
+  border-color: #2a2a2a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:active {
+  transform: scale(0.98);
+}
+
+.cta-button.large {
+  padding: 1rem 2rem;
+  font-size: 0.875rem;
+}
+
+.project-card {
+  background: var(--color-light-pink);
+  color: var(--color-black);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-black);
+  color: var(--color-light-pink);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section Padding */
+.section-padding {
+  padding: 6rem 0;
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 8rem 0;
+  }
+}
+
+/* Custom Colors for Tailwind */
+.bg-black { background-color: var(--color-black); }
+.bg-white { background-color: var(--color-white); }
+.bg-dark-grey { background-color: var(--color-dark-grey); }
+.bg-mid-grey { background-color: var(--color-mid-grey); }
+.bg-grey { background-color: var(--color-grey); }
+.bg-mid-blue { background-color: var(--color-mid-blue); }
+.bg-mid-pink { background-color: var(--color-mid-pink); }
+.bg-light-pink { background-color: var(--color-light-pink); }
+.bg-mid-purple { background-color: var(--color-mid-purple); }
+.bg-mid-yellow { background-color: var(--color-mid-yellow); }
+.bg-mid-orange { background-color: var(--color-mid-orange); }
+.bg-mid-green { background-color: var(--color-mid-green); }
+
+.text-black { color: var(--color-black); }
+.text-white { color: var(--color-white); }
+.text-dark-grey { color: var(--color-dark-grey); }
+.text-mid-grey { color: var(--color-mid-grey); }
+.text-grey { color: var(--color-grey); }
+.text-mid-blue { color: var(--color-mid-blue); }
+.text-mid-pink { color: var(--color-mid-pink); }
+.text-light-pink { color: var(--color-light-pink); }
+.text-mid-purple { color: var(--color-mid-purple); }
+.text-mid-yellow { color: var(--color-mid-yellow); }
+.text-mid-orange { color: var(--color-mid-orange); }
+.text-mid-green { color: var(--color-mid-green); }
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.7s ease-out forwards;
+}
+
+/* Custom animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
