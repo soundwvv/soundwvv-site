@@ -63,7 +63,10 @@ export const clients = [
   { id: 2, name: "Mr. C Beverly Hills", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/6vj0rcha_MrCLogo_400x400.png" },
   { id: 3, name: "Hilltop Coffee & Kitchen", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/ga7v94ag_hilltopcoffeekitchen.png" },
   { id: 4, name: "Proper Hotel", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/erlsu3da_properhotelsm.png" },
-  { id: 5, name: "E.P. & L.P.", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/i8w4fspy_eplp.png" }
+  { id: 5, name: "E.P. & L.P.", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/i8w4fspy_eplp.png" },
+  { id: 6, name: "Meta", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/cn10147u_meta.png" },
+  { id: 7, name: "Loews Hotels", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/inuqzlh0_loews.png" },
+  { id: 8, name: "Playboy", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/itvpzrj1_playboy.png" }
 ];
 
 export const aboutContent = {
