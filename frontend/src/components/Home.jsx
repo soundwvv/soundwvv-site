@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
-import HeroSection from './HeroSection';
+import LoadingScreen from './LoadingScreen';
+import HeroSectionNew from './HeroSectionNew';
+import BridgeSection from './BridgeSection';
 import AboutSection from './AboutSection';
 import ServicesSection from './ServicesSection';
 import CredibilitySection from './CredibilitySection';
@@ -9,16 +11,25 @@ import Footer from './Footer';
 import { Toaster } from './ui/sonner';
 
 const Home = () => {
+  const [showLoading, setShowLoading] = useState(true);
+
   return (
     <div className="bg-black min-h-screen">
-      <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <CredibilitySection />
-      <ContactSection />
-      <Footer />
-      <Toaster />
+      {showLoading && <LoadingScreen onLoadingComplete={() => setShowLoading(false)} />}
+      
+      {!showLoading && (
+        <>
+          <Navbar />
+          <HeroSectionNew />
+          <BridgeSection />
+          <AboutSection />
+          <ServicesSection />
+          <CredibilitySection />
+          <ContactSection />
+          <Footer />
+          <Toaster />
+        </>
+      )}
     </div>
   );
 };
