@@ -51,16 +51,16 @@ const CredibilitySection = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {clients.map((client) => (
               <div
                 key={client.id}
-                className="aspect-square bg-dark-grey/10 border border-white/10 rounded-lg overflow-hidden hover:border-mid-purple/50 transition-all hover:transform hover:scale-105 group"
+                className="aspect-square bg-dark-grey/10 border border-white/10 rounded-lg overflow-hidden hover:border-mid-purple/50 transition-all hover:transform hover:scale-105 group flex items-center justify-center p-6"
               >
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
+                  className="w-full h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity filter brightness-90 group-hover:brightness-100"
                 />
               </div>
             ))}

@@ -59,12 +59,11 @@ export const stats = [
 ];
 
 export const clients = [
-  { id: 1, name: "Nike", logo: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop" },
-  { id: 2, name: "Adidas", logo: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400&h=300&fit=crop" },
-  { id: 3, name: "Apple", logo: "https://images.unsplash.com/photo-1611532736570-a8e2d36e1122?w=400&h=300&fit=crop" },
-  { id: 4, name: "Spotify", logo: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop" },
-  { id: 5, name: "Red Bull", logo: "https://images.unsplash.com/photo-1585122472827-e1174c7ef4c7?w=400&h=300&fit=crop" },
-  { id: 6, name: "BMW", logo: "https://images.unsplash.com/photo-1617886903355-9354bb57751f?w=400&h=300&fit=crop" }
+  { id: 1, name: "Terranea Resort", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/9p5ez5jb_terranea%20resort.png" },
+  { id: 2, name: "Mr. C Beverly Hills", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/6vj0rcha_MrCLogo_400x400.png" },
+  { id: 3, name: "Hilltop Coffee & Kitchen", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/ga7v94ag_hilltopcoffeekitchen.png" },
+  { id: 4, name: "Proper Hotel", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/erlsu3da_properhotelsm.png" },
+  { id: 5, name: "E.P. & L.P.", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/i8w4fspy_eplp.png" }
 ];
 
 export const aboutContent = {
