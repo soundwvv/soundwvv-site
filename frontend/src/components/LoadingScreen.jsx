@@ -4,7 +4,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time (3 seconds)
+    // Loading duration (3 seconds)
     const timer = setTimeout(() => {
       setIsLoading(false);
       setTimeout(() => {
@@ -29,15 +29,20 @@ const LoadingScreen = ({ onLoadingComplete }) => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/iscafoyd_Soundwav_Loop_WhiteLogo.mp4" type="video/mp4" />
+        <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/ay9ymt33_BLACKSTARRYWAVES10296176-hd_1920_1080_25fps.mp4" type="video/mp4" />
       </video>
 
-      {/* Logo Animation Overlay */}
-      <div className="relative z-10 flex flex-col items-center">
-        {/* The video already contains the logo, so we just need to display it */}
-        <div className="text-white text-6xl font-bold tracking-wider animate-pulse">
-          {/* Logo is in the video */}
-        </div>
+      {/* Logo Animation - Smaller and Centered */}
+      <div className="relative z-10 flex items-center justify-center">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-64 h-64 md:w-80 md:h-80 object-contain"
+        >
+          <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/iscafoyd_Soundwav_Loop_WhiteLogo.mp4" type="video/mp4" />
+        </video>
       </div>
     </div>
   );

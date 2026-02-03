@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const HeroSectionNew = () => {
@@ -11,18 +11,16 @@ const HeroSectionNew = () => {
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      {/* Vinyl Record Video Background - Placeholder until you provide the file */}
+      {/* Vinyl Record Video Background */}
       <div className="absolute inset-0 bg-black">
-        {/* Placeholder for vinyl record video */}
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-40"
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
         >
-          {/* Replace with your vinyl record video URL when provided */}
-          <source src="YOUR_VINYL_VIDEO_URL_HERE" type="video/mp4" />
+          <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/tlklycaq_VINYLSPINNING5983038-uhd_3840_2160_24fps.mp4" type="video/mp4" />
         </video>
         
         {/* Gradient overlay for better text readability */}

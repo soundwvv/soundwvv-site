@@ -38,10 +38,9 @@ const BridgeSection = () => {
           isVisible ? 'opacity-100 delay-700' : 'opacity-0'
         }`}
       >
-        {/* Placeholder for hospitality photo */}
         <img
-          src="YOUR_HOSPITALITY_PHOTO_URL_HERE"
-          alt="Hospitality space"
+          src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/k3euz6wn_LuxuryHospitalityHeroImage.jpg"
+          alt="Luxury hospitality space"
           className="w-full h-full object-cover"
         />
         {/* Dark overlay for text readability */}
