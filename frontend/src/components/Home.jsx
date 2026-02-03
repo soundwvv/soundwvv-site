@@ -4,7 +4,7 @@ import LoadingScreen from './LoadingScreen';
 import HeroSectionNew from './HeroSectionNew';
 import BridgeSection from './BridgeSection';
 import AboutSection from './AboutSection';
-import ServicesSection from './ServicesSection';
+import ServicesSectionNew from './ServicesSectionNew';
 import CredibilitySection from './CredibilitySection';
 import ContactSection from './ContactSection';
 import Footer from './Footer';
@@ -23,7 +23,7 @@ const Home = () => {
           <HeroSectionNew />
           <BridgeSection />
           <AboutSection />
-          <ServicesSection />
+          <ServicesSectionNew />
           <CredibilitySection />
           <ContactSection />
           <Footer />

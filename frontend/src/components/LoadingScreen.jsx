@@ -32,14 +32,15 @@ const LoadingScreen = ({ onLoadingComplete }) => {
         <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/ay9ymt33_BLACKSTARRYWAVES10296176-hd_1920_1080_25fps.mp4" type="video/mp4" />
       </video>
 
-      {/* Logo Animation - Smaller and Centered */}
+      {/* Logo Animation - Larger and Centered with blend mode */}
       <div className="relative z-10 flex items-center justify-center">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="w-64 h-64 md:w-80 md:h-80 object-contain"
+          className="w-96 h-96 md:w-[32rem] md:h-[32rem] object-contain mix-blend-screen"
+          style={{ filter: 'brightness(1.2) contrast(1.1)' }}
         >
           <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/iscafoyd_Soundwav_Loop_WhiteLogo.mp4" type="video/mp4" />
         </video>
