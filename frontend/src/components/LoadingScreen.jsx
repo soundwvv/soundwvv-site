@@ -7,18 +7,18 @@ const LoadingScreen = ({ onLoadingComplete }) => {
 
   useEffect(() => {
     // Fetch the Lottie JSON animation
-    fetch('https://customer-assets.emergentagent.com/job_beat-space/artifacts/qjtgsuow_Soundwav_Loop_WhiteLogo.json')
+    fetch('https://customer-assets.emergentagent.com/job_beat-space/artifacts/7q0ii5um_Soundwav_Loop_WhiteLogo.json')
       .then(response => response.json())
       .then(data => setAnimationData(data))
       .catch(error => console.error('Error loading animation:', error));
 
-    // Loading duration (4-4.5 seconds)
+    // Loading duration (4-5 seconds)
     const timer = setTimeout(() => {
       setIsLoading(false);
       setTimeout(() => {
         onLoadingComplete();
       }, 500);
-    }, 4250);
+    }, 4500);
 
     return () => clearTimeout(timer);
   }, [onLoadingComplete]);
@@ -29,7 +29,18 @@ const LoadingScreen = ({ onLoadingComplete }) => {
         isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
     >
-      {/* Lottie Animation */}
+      {/* Starry Wave Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/l91nk0mj_BLACKSTARRYWAVES10296176-hd_1920_1080_25fps.mp4" type="video/mp4" />
+      </video>
+
+      {/* Lottie Animation - Centered with transparent background */}
       {animationData && (
         <div className="relative z-10 w-96 h-96 md:w-[32rem] md:h-[32rem]">
           <Lottie 

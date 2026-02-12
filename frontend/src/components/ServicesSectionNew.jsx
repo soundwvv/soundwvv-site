@@ -33,7 +33,7 @@ const ServicesSectionNew = () => {
           {/* Header */}
           <div className="mb-12">
             <h2 className="text-white text-5xl lg:text-6xl xl:text-7xl font-light mb-4 tracking-tight">
-              SOUNDWVV Services
+              Services
             </h2>
             <p className="text-white/60 text-lg lg:text-xl font-light">
               Tiered sound programs tailored to the needs of each space.

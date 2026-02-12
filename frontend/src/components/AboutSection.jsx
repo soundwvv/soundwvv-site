@@ -1,6 +1,14 @@
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
 
 const AboutSection = () => {
+  const scrollToAbout = () => {
+    const element = document.getElementById('about');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="about" className="section-padding bg-black">
       <div className="max-w-[1920px] mx-auto px-6 lg:px-8">
@@ -11,9 +19,18 @@ const AboutSection = () => {
               About SOUNDWVV
             </h2>
             
-            <p className="body-large text-mid-grey leading-relaxed">
+            <p className="body-large text-mid-grey leading-relaxed mb-6">
               SOUNDWVV is a DJ-led music studio curating sound for hospitality spaces, retail environments, brands, and live events. We approach music with structure and intention, guided by DJ expertise rather than automated playlists. Each music program is designed to support the rhythm and identity of a space over time.
             </p>
+
+            {/* Small CTA Link */}
+            <button 
+              onClick={scrollToAbout}
+              className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm group"
+            >
+              <span>About SOUNDWVV</span>
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </button>
           </div>
 
           {/* Right: DJ Silhouette Image */}
