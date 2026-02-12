@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { formFields } from '../mock';
-import { Send, CheckCircle2, Mail, Phone, MapPin } from 'lucide-react';
+import { Send, Mail, Phone, MapPin } from 'lucide-react';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { useToast } from '../hooks/use-toast';
@@ -19,11 +19,10 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     setTimeout(() => {
       toast({
         title: "Consultation Request Received!",
-        description: "We'll get back to you within 24 hours to discuss your project.",
+        description: "We'll get back to you within 24 hours.",
       });
       setFormData(formFields);
       setIsSubmitting(false);
@@ -31,31 +30,35 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-dark-grey/5">
-      <div className="max-w-[1920px] mx-auto px-6 lg:px-8">
+    <section id="contact" className="section-padding bg-[#0a0a0a] relative overflow-hidden">
+      {/* Background vinyl texture with overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-black/80"></div>
+      </div>
+
+      <div className="relative max-w-[1920px] mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left: Contact Info */}
           <div>
             <div className="mb-8">
-              <span className="caption text-mid-pink uppercase tracking-widest mb-4 block">Let's Connect</span>
+              <span className="text-white/60 text-sm uppercase tracking-widest mb-4 block">Let's Connect</span>
               <h2 className="section-heading text-white mb-6">
-                Book Your Sound Consultation
+                Start Your Sound Consultation
               </h2>
               <p className="body-large text-mid-grey leading-relaxed">
-                Ready to elevate your brand with the perfect sonic identity? 
-                Fill out the form and let's start crafting your unique audio experience.
+                Tell us about your space, brand, event, or project. We'll take it from there.
               </p>
             </div>
 
-            <div className="space-y-6 mb-12">
+            <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-mid-purple/20 flex items-center justify-center flex-shrink-0">
                   <Mail size={20} className="text-mid-purple" />
                 </div>
                 <div>
-                  <h4 className="text-white font-medium mb-1">Email Us</h4>
-                  <a href="mailto:hello@soundwvv.com" className="text-mid-grey hover:text-white transition-colors">
-                    hello@soundwvv.com
+                  <h4 className="text-white font-medium mb-1">Email</h4>
+                  <a href="mailto:contact@soundwvv.com" className="text-mid-grey hover:text-white transition-colors">
+                    contact@soundwvv.com
                   </a>
                 </div>
               </div>
@@ -65,9 +68,9 @@ const ContactSection = () => {
                   <Phone size={20} className="text-mid-pink" />
                 </div>
                 <div>
-                  <h4 className="text-white font-medium mb-1">Call Us</h4>
-                  <a href="tel:+1234567890" className="text-mid-grey hover:text-white transition-colors">
-                    +1 (234) 567-890
+                  <h4 className="text-white font-medium mb-1">Phone</h4>
+                  <a href="tel:+12347777777" className="text-mid-grey hover:text-white transition-colors">
+                    +1 (234) 777-7777
                   </a>
                 </div>
               </div>
@@ -77,29 +80,10 @@ const ContactSection = () => {
                   <MapPin size={20} className="text-mid-blue" />
                 </div>
                 <div>
-                  <h4 className="text-white font-medium mb-1">Visit Studio</h4>
+                  <h4 className="text-white font-medium mb-1">Location</h4>
                   <p className="text-mid-grey">Los Angeles, CA</p>
                 </div>
               </div>
-            </div>
-
-            <div className="bg-dark-grey/10 border border-mid-purple/20 rounded-lg p-6">
-              <CheckCircle2 size={24} className="text-mid-purple mb-3" />
-              <h4 className="text-white font-medium mb-2">What Happens Next?</h4>
-              <ul className="space-y-2 text-mid-grey body-small">
-                <li className="flex items-start gap-2">
-                  <span className="text-mid-purple mt-1">•</span>
-                  <span>We'll review your project details within 24 hours</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-mid-pink mt-1">•</span>
-                  <span>Schedule a discovery call to understand your vision</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-mid-blue mt-1">•</span>
-                  <span>Receive a custom proposal tailored to your needs</span>
-                </li>
-              </ul>
             </div>
           </div>
 
@@ -155,61 +139,6 @@ const ContactSection = () => {
                 />
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="eventType" className="block text-white text-sm font-medium mb-2">
-                    Service Type *
-                  </label>
-                  <select
-                    id="eventType"
-                    name="eventType"
-                    required
-                    value={formData.eventType}
-                    onChange={handleChange}
-                    className="w-full bg-dark-grey/20 border border-white/20 text-white rounded-md px-3 py-2 focus:border-mid-purple focus:outline-none focus:ring-1 focus:ring-mid-purple"
-                  >
-                    <option value="">Select service</option>
-                    <option value="dj-sets">DJ Sets</option>
-                    <option value="music-curation">Music Curation</option>
-                    <option value="event-production">Event Production</option>
-                    <option value="sound-consulting">Sound Consulting</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="date" className="block text-white text-sm font-medium mb-2">
-                    Preferred Date
-                  </label>
-                  <Input
-                    id="date"
-                    name="date"
-                    type="date"
-                    value={formData.date}
-                    onChange={handleChange}
-                    className="bg-dark-grey/20 border-white/20 text-white focus:border-mid-purple"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="budget" className="block text-white text-sm font-medium mb-2">
-                  Budget Range
-                </label>
-                <select
-                  id="budget"
-                  name="budget"
-                  value={formData.budget}
-                  onChange={handleChange}
-                  className="w-full bg-dark-grey/20 border border-white/20 text-white rounded-md px-3 py-2 focus:border-mid-purple focus:outline-none focus:ring-1 focus:ring-mid-purple"
-                >
-                  <option value="">Select budget</option>
-                  <option value="under-5k">Under $5,000</option>
-                  <option value="5k-10k">$5,000 - $10,000</option>
-                  <option value="10k-25k">$10,000 - $25,000</option>
-                  <option value="25k-plus">$25,000+</option>
-                </select>
-              </div>
-
               <div>
                 <label htmlFor="message" className="block text-white text-sm font-medium mb-2">
                   Tell Us About Your Project *
@@ -222,7 +151,7 @@ const ContactSection = () => {
                   onChange={handleChange}
                   rows={5}
                   className="bg-dark-grey/20 border-white/20 text-white focus:border-mid-purple resize-none"
-                  placeholder="Describe your event, brand, or space. What kind of sonic experience are you envisioning?"
+                  placeholder="Describe your space, brand, or event..."
                 />
               </div>
 

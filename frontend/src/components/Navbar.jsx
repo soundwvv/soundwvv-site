@@ -43,11 +43,8 @@ const Navbar = () => {
             <button onClick={() => scrollToSection('services')} className="nav-link">
               Services
             </button>
-            <button onClick={() => scrollToSection('credibility')} className="nav-link">
-              Clients
-            </button>
             <button onClick={() => scrollToSection('contact')} className="cta-button">
-              Book Consultation
+              Start Consultation
             </button>
           </div>
 
@@ -71,11 +68,8 @@ const Navbar = () => {
               <button onClick={() => scrollToSection('services')} className="nav-link text-left">
                 Services
               </button>
-              <button onClick={() => scrollToSection('credibility')} className="nav-link text-left">
-                Clients
-              </button>
               <button onClick={() => scrollToSection('contact')} className="cta-button w-full">
-                Book Consultation
+                Start Consultation
               </button>
             </div>
           </div>

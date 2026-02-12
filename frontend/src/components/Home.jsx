@@ -5,6 +5,7 @@ import HeroSectionNew from './HeroSectionNew';
 import BridgeSection from './BridgeSection';
 import AboutSection from './AboutSection';
 import ServicesSectionNew from './ServicesSectionNew';
+import OnDemandSoundSection from './OnDemandSoundSection';
 import CredibilitySection from './CredibilitySection';
 import ContactSection from './ContactSection';
 import Footer from './Footer';
@@ -24,6 +25,7 @@ const Home = () => {
           <BridgeSection />
           <AboutSection />
           <ServicesSectionNew />
+          <OnDemandSoundSection />
           <CredibilitySection />
           <ContactSection />
           <Footer />

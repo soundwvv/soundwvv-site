@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Facebook, Music, Youtube } from 'lucide-react';
+import { Instagram, Facebook, Music } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,12 +7,12 @@ const Footer = () => {
   return (
     <footer className="bg-black border-t border-white/10">
       <div className="max-w-[1920px] mx-auto px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Brand */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
+          {/* Left: Brand */}
           <div>
             <h3 className="text-2xl font-bold text-white mb-4 tracking-wider">SOUNDWVV</h3>
             <p className="text-mid-grey body-small mb-6">
-              Transforming brands, spaces, and events through curated sonic experiences.
+              Music direction for brands and spaces.
             </p>
             <div className="flex items-center gap-4">
               <a 
@@ -42,57 +42,21 @@ const Footer = () => {
               >
                 <Music size={18} />
               </a>
-              <a 
-                href="https://youtube.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-dark-grey/20 flex items-center justify-center text-mid-grey hover:bg-mid-purple hover:text-white transition-all"
-                aria-label="YouTube"
-              >
-                <Youtube size={18} />
-              </a>
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-white font-medium mb-4 uppercase tracking-wider text-sm">Services</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#services" className="text-mid-grey hover:text-white transition-colors body-small">
-                  DJ Sets
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-mid-grey hover:text-white transition-colors body-small">
-                  Music Curation
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-mid-grey hover:text-white transition-colors body-small">
-                  Event Production
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-mid-grey hover:text-white transition-colors body-small">
-                  Sound Consulting
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company */}
+          {/* Middle: Company */}
           <div>
             <h4 className="text-white font-medium mb-4 uppercase tracking-wider text-sm">Company</h4>
             <ul className="space-y-3">
               <li>
                 <a href="#about" className="text-mid-grey hover:text-white transition-colors body-small">
-                  About Us
+                  About
                 </a>
               </li>
               <li>
-                <a href="#credibility" className="text-mid-grey hover:text-white transition-colors body-small">
-                  Our Clients
+                <a href="#services" className="text-mid-grey hover:text-white transition-colors body-small">
+                  Services
                 </a>
               </li>
               <li>
@@ -100,26 +64,21 @@ const Footer = () => {
                   Contact
                 </a>
               </li>
-              <li>
-                <a href="#" className="text-mid-grey hover:text-white transition-colors body-small">
-                  Careers
-                </a>
-              </li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Right: Get In Touch */}
           <div>
             <h4 className="text-white font-medium mb-4 uppercase tracking-wider text-sm">Get In Touch</h4>
             <ul className="space-y-3 text-mid-grey body-small">
               <li>
-                <a href="mailto:hello@soundwvv.com" className="hover:text-white transition-colors">
-                  hello@soundwvv.com
+                <a href="mailto:contact@soundwvv.com" className="hover:text-white transition-colors">
+                  contact@soundwvv.com
                 </a>
               </li>
               <li>
-                <a href="tel:+1234567890" className="hover:text-white transition-colors">
-                  +1 (234) 567-890
+                <a href="tel:+12347777777" className="hover:text-white transition-colors">
+                  +1 (234) 777-7777
                 </a>
               </li>
               <li className="pt-2">
