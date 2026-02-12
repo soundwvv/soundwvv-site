@@ -1,76 +1,108 @@
 import React from 'react';
-import { stats, clients } from '../mock';
-import { TrendingUp } from 'lucide-react';
 
 const CredibilitySection = () => {
+  const stats = [
+    {
+      id: 1,
+      number: "20+",
+      label: "Years in Music",
+      color: "#d987ff"
+    },
+    {
+      id: 2,
+      number: "200+",
+      label: "Venues & Events",
+      color: "#ff84e4"
+    },
+    {
+      id: 3,
+      number: "500+",
+      label: "Live Sets",
+      color: "#88a2ff"
+    }
+  ];
+
+  const clients = [
+    { id: 1, name: "Terranea Resort", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/9p5ez5jb_terranea%20resort.png" },
+    { id: 2, name: "NBA Players Association", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/aiuc64g8_nbaplayersassociation.png" },
+    { id: 3, name: "Hilltop Coffee & Kitchen", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/ga7v94ag_hilltopcoffeekitchen.png" },
+    { id: 4, name: "Proper Hotel", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/erlsu3da_properhotelsm.png" },
+    { id: 5, name: "E.P. & L.P.", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/i8w4fspy_eplp.png" },
+    { id: 6, name: "Meta", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/cn10147u_meta.png" },
+    { id: 7, name: "Loews Hotels", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/inuqzlh0_loews.png" },
+    { id: 8, name: "Playboy", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/itvpzrj1_playboy.png" }
+  ];
+
   return (
-    <section id="credibility" className="section-padding bg-black">
-      <div className="max-w-[1920px] mx-auto px-6 lg:px-8">
-        {/* Stats Section */}
-        <div className="mb-20">
+    <section id="credibility" className="section-padding bg-black relative overflow-hidden">
+      {/* Stats Section with Video Background */}
+      <div className="relative mb-20">
+        {/* Background Video */}
+        <div className="absolute inset-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-20"
+          >
+            <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/rr9433ze_NighttimeDRONErooftop14297607_3840_2160_24fps.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-black/70"></div>
+        </div>
+
+        <div className="relative max-w-[1920px] mx-auto px-6 lg:px-8 py-20">
           <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <TrendingUp size={28} className="text-mid-pink" />
-              <span className="caption text-mid-pink uppercase tracking-widest">By The Numbers</span>
-            </div>
             <h2 className="section-heading text-white">
-              Proven Track Record
+              Our SOUND Track Record
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {stats.map((stat) => (
               <div
                 key={stat.id}
-                className="text-center p-8 bg-dark-grey/10 border border-white/10 rounded-lg hover:border-white/20 transition-all hover:transform hover:scale-105"
+                className="text-center"
               >
                 <div 
-                  className="text-5xl lg:text-6xl font-bold mb-3"
+                  className="text-6xl lg:text-7xl font-light mb-3"
                   style={{ color: stat.color }}
                 >
                   {stat.number}
                 </div>
-                <div className="text-mid-grey body-medium uppercase tracking-wider">
+                <div className="text-white text-lg uppercase tracking-wider font-light">
                   {stat.label}
                 </div>
               </div>
             ))}
           </div>
         </div>
+      </div>
 
-        {/* Clients Section */}
-        <div>
-          <div className="text-center mb-12">
-            <span className="caption text-mid-purple uppercase tracking-widest mb-4 block">Trusted By</span>
-            <h2 className="section-heading text-white mb-6">
-              Brand Partners
-            </h2>
-            <p className="body-large text-mid-grey max-w-3xl mx-auto">
-              We've had the privilege of collaborating with industry-leading brands 
-              to create memorable sonic experiences worldwide.
-            </p>
-          </div>
+      {/* Brand Partners Section */}
+      <div className="max-w-[1920px] mx-auto px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="section-heading text-white mb-6">
+            Trusted by Brand Partners
+          </h2>
+          <p className="body-large text-mid-grey max-w-3xl mx-auto">
+            Selected collaborations across hospitality, retail, and global brands.
+          </p>
+        </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
-            {clients.map((client) => (
-              <div
-                key={client.id}
-                className="aspect-square bg-white rounded-lg overflow-hidden hover:shadow-xl transition-all hover:transform hover:scale-105 group flex items-center justify-center p-8"
-              >
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <p className="body-medium text-mid-grey">
-              Join the growing list of brands elevating their identity through sound.
-            </p>
-          </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
+          {clients.map((client) => (
+            <div
+              key={client.id}
+              className="aspect-square bg-white rounded-lg overflow-hidden hover:shadow-xl transition-all hover:transform hover:scale-105 group flex items-center justify-center p-8"
+            >
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="w-full h-full object-contain"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
