@@ -1,26 +1,73 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const CredibilitySection = () => {
+  const [counts, setCounts] = useState({ stat1: 0, stat2: 0, stat3: 0 });
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef(null);
+
   const stats = [
     {
-      id: 1,
-      number: "20+",
+      id: 'stat1',
+      number: 20,
+      suffix: '+',
       label: "Years in Music",
       color: "#d987ff"
     },
     {
-      id: 2,
-      number: "200+",
+      id: 'stat2',
+      number: 200,
+      suffix: '+',
       label: "Venues & Events",
       color: "#ff84e4"
     },
     {
-      id: 3,
-      number: "500+",
+      id: 'stat3',
+      number: 500,
+      suffix: '+',
       label: "Live Sets",
       color: "#88a2ff"
     }
   ];
+
+  useEffect(() => {
+    const currentRef = sectionRef.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          
+          // Animate each stat
+          stats.forEach((stat) => {
+            const duration = 2000; // 2 seconds
+            const steps = 60;
+            const increment = stat.number / steps;
+            let current = 0;
+            
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= stat.number) {
+                setCounts(prev => ({ ...prev, [stat.id]: stat.number }));
+                clearInterval(timer);
+              } else {
+                setCounts(prev => ({ ...prev, [stat.id]: Math.floor(current) }));
+              }
+            }, duration / steps);
+          });
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [hasAnimated]);
 
   const clients = [
     { id: 1, name: "Terranea Resort", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/9p5ez5jb_terranea%20resort.png" },
@@ -36,19 +83,19 @@ const CredibilitySection = () => {
   return (
     <section id="credibility" className="section-padding bg-black relative overflow-hidden">
       {/* Stats Section with Video Background */}
-      <div className="relative mb-20">
-        {/* Background Video */}
+      <div ref={sectionRef} className="relative mb-20">
+        {/* Background Video - subtle overlay */}
         <div className="absolute inset-0">
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-20"
+            className="absolute inset-0 w-full h-full object-cover opacity-30"
           >
             <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/rr9433ze_NighttimeDRONErooftop14297607_3840_2160_24fps.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-black/70"></div>
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
 
         <div className="relative max-w-[1920px] mx-auto px-6 lg:px-8 py-20">
@@ -68,7 +115,7 @@ const CredibilitySection = () => {
                   className="text-6xl lg:text-7xl font-light mb-3"
                   style={{ color: stat.color }}
                 >
-                  {stat.number}
+                  {counts[stat.id]}{stat.suffix}
                 </div>
                 <div className="text-white text-lg uppercase tracking-wider font-light">
                   {stat.label}
@@ -86,7 +133,7 @@ const CredibilitySection = () => {
             Trusted by Brand Partners
           </h2>
           <p className="body-large text-mid-grey max-w-3xl mx-auto">
-            Selected collaborations across hospitality, retail, and global brands.
+            Selected venues and global brand environments we've supported.
           </p>
         </div>
 

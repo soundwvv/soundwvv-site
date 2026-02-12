@@ -31,9 +31,16 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="section-padding bg-[#0a0a0a] relative overflow-hidden">
-      {/* Background vinyl texture with overlay */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-black/80"></div>
+      {/* Background vinyl texture with very subtle opacity */}
+      <div 
+        className="absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage: 'url(https://customer-assets.emergentagent.com/job_beat-space/artifacts/frq7qz9v_VinylUpsideDown.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
       <div className="relative max-w-[1920px] mx-auto px-6 lg:px-8">
@@ -46,7 +53,7 @@ const ContactSection = () => {
                 Start Your Sound Consultation
               </h2>
               <p className="body-large text-mid-grey leading-relaxed">
-                Tell us about your space, brand, event, or project. We'll take it from there.
+                Share a few details. We'll take it from there.
               </p>
             </div>
 
@@ -137,6 +144,26 @@ const ContactSection = () => {
                   className="bg-dark-grey/20 border-white/20 text-white focus:border-mid-purple"
                   placeholder="Your Brand"
                 />
+              </div>
+
+              <div>
+                <label htmlFor="serviceType" className="block text-white text-sm font-medium mb-2">
+                  Service Type
+                </label>
+                <select
+                  id="serviceType"
+                  name="eventType"
+                  value={formData.eventType}
+                  onChange={handleChange}
+                  className="w-full bg-dark-grey/20 border border-white/20 text-white rounded-md px-3 py-2 focus:border-mid-purple focus:outline-none focus:ring-1 focus:ring-mid-purple"
+                >
+                  <option value="">Select service</option>
+                  <option value="core">CORE</option>
+                  <option value="flow">FLOW</option>
+                  <option value="wave">WAVE</option>
+                  <option value="on-demand">On-Demand Sound</option>
+                  <option value="not-sure">Not sure yet</option>
+                </select>
               </div>
 
               <div>
