@@ -29,14 +29,14 @@ const HeroSectionNew = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 lg:px-8 text-center">
-        <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-light mb-6 leading-tight tracking-tight">
+        <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-light mb-4 leading-tight tracking-tight">
           We design how your
           <br />
           brand sounds
         </h1>
 
-        <p className="text-white/80 text-lg md:text-xl lg:text-2xl font-light mb-12 tracking-wide">
-          DJ led curation studio
+        <p className="text-white/70 text-base md:text-lg font-light mb-12 tracking-wide">
+          DJ-led music direction
         </p>
 
         <button 

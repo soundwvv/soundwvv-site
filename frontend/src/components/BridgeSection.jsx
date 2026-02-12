@@ -12,7 +12,7 @@ const BridgeSection = () => {
         }
       },
       {
-        threshold: 0.3, // Trigger when 30% of section is visible
+        threshold: 0.3,
       }
     );
 
@@ -44,19 +44,21 @@ const BridgeSection = () => {
           className="w-full h-full object-cover"
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
-      {/* Text Content - Fades in first */}
+      {/* Text Content - Fades in first - Stacked format */}
       <div 
         className={`relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center transition-all duration-1000 ease-out ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
         <p className="text-white text-3xl md:text-4xl lg:text-5xl font-light leading-relaxed tracking-tight">
-          From hospitality and retail to creative brands and cultural environments, our{' '}
-          <span className="font-normal">SOUNDWVV</span> sound is designed with purpose — 
-          not by algorithmic default.
+          Curated sound for brands.
+          <br />
+          Designed with purpose.
+          <br />
+          Built for the space.
         </p>
       </div>
     </section>

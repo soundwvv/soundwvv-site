@@ -8,25 +8,25 @@ const ServicesSectionNew = () => {
     CORE: {
       title: 'CORE',
       subtitle: '– The Foundation',
-      description: 'Establish your sound identity with curated playlists and clear music direction.',
-      image: 'https://customer-assets.emergentagent.com/job_beat-space/artifacts/YOUR_CORE2_IMAGE_URL_HERE'
+      description: 'Establish your sound identity through curated playlists and focused music direction.',
+      image: 'https://customer-assets.emergentagent.com/job_beat-space/artifacts/q9mweq12_Core2.jpg'
     },
     FLOW: {
       title: 'FLOW',
       subtitle: '– The Evolution',
-      description: 'Ongoing curation and refinement for venues, retail, and hospitality spaces.',
+      description: 'Ongoing curation and refinement for hospitality, retail, and event venue environments.',
       image: 'https://customer-assets.emergentagent.com/job_beat-space/artifacts/0hktpn29_Flow2.jpg'
     },
     WAVE: {
       title: 'WAVE',
       subtitle: '– The Experience',
-      description: 'A complete sound environment — deeper programming, custom mixes, and ongoing evolution.',
+      description: 'A fully developed sound environment — deeper programming, custom mixes, and evolving direction.',
       image: 'https://customer-assets.emergentagent.com/job_beat-space/artifacts/b47wwx7j_WAVE10.jpg'
     }
   };
 
   return (
-    <section className="min-h-screen bg-[#0a0a0a] relative overflow-hidden">
+    <section id="services" className="min-h-screen bg-[#0a0a0a] relative overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
         {/* Left Side - Service Navigation */}
         <div className="flex flex-col justify-between p-8 lg:p-12 xl:p-16">
@@ -35,6 +35,9 @@ const ServicesSectionNew = () => {
             <h2 className="text-white text-5xl lg:text-6xl xl:text-7xl font-light mb-4 tracking-tight">
               SOUNDWVV Services
             </h2>
+            <p className="text-white/60 text-lg lg:text-xl font-light">
+              Tiered sound programs tailored to the needs of each space.
+            </p>
           </div>
 
           {/* Service Tiers */}
@@ -48,12 +51,12 @@ const ServicesSectionNew = () => {
                 >
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className={`text-5xl lg:text-6xl xl:text-7xl font-light mb-2 transition-colors ${
+                      <h3 className={`text-6xl lg:text-7xl xl:text-8xl font-light mb-2 transition-colors ${
                         activeService === key ? 'text-white' : 'text-white/40'
                       }`}>
                         {service.title}
                       </h3>
-                      <p className={`text-lg lg:text-xl transition-colors ${
+                      <p className={`text-base lg:text-lg transition-colors ${
                         activeService === key ? 'text-white/70' : 'text-white/30'
                       }`}>
                         {service.subtitle}
