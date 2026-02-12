@@ -31,16 +31,17 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="section-padding bg-[#0a0a0a] relative overflow-hidden">
-      {/* Background vinyl texture with very subtle opacity */}
+      {/* Background vinyl texture - more visible with blur and reduced saturation */}
       <div 
-        className="absolute inset-0 opacity-[0.06]"
+        className="absolute inset-0 opacity-20"
         style={{
-          backgroundImage: 'url(https://customer-assets.emergentagent.com/job_beat-space/artifacts/frq7qz9v_VinylUpsideDown.jpg)',
+          backgroundImage: 'url(https://customer-assets.emergentagent.com/job_beat-space/artifacts/zoxrdq84_VinylUpsideDown.jpg)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
+          filter: 'blur(1px) saturate(0.7)'
         }}
       >
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
       <div className="relative max-w-[1920px] mx-auto px-6 lg:px-8">

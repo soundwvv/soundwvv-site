@@ -43,6 +43,9 @@ const Navbar = () => {
             <button onClick={() => scrollToSection('services')} className="nav-link">
               Services
             </button>
+            <button onClick={() => scrollToSection('contact')} className="nav-link">
+              Contact
+            </button>
             <button onClick={() => scrollToSection('contact')} className="cta-button">
               Start Consultation
             </button>
@@ -67,6 +70,9 @@ const Navbar = () => {
               </button>
               <button onClick={() => scrollToSection('services')} className="nav-link text-left">
                 Services
+              </button>
+              <button onClick={() => scrollToSection('contact')} className="nav-link text-left">
+                Contact
               </button>
               <button onClick={() => scrollToSection('contact')} className="cta-button w-full">
                 Start Consultation

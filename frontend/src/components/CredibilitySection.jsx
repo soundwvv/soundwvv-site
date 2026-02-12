@@ -38,7 +38,7 @@ const CredibilitySection = () => {
           
           // Animate each stat
           stats.forEach((stat) => {
-            const duration = 2000; // 2 seconds
+            const duration = 2000;
             const steps = 60;
             const increment = stat.number / steps;
             let current = 0;
@@ -82,20 +82,20 @@ const CredibilitySection = () => {
 
   return (
     <section id="credibility" className="section-padding bg-black relative overflow-hidden">
-      {/* Stats Section with Video Background */}
+      {/* Stats Section with Video Background - Increased brightness */}
       <div ref={sectionRef} className="relative mb-20">
-        {/* Background Video - subtle overlay */}
+        {/* Background Video - brighter */}
         <div className="absolute inset-0">
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-30"
+            className="absolute inset-0 w-full h-full object-cover opacity-50"
           >
             <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/rr9433ze_NighttimeDRONErooftop14297607_3840_2160_24fps.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
         <div className="relative max-w-[1920px] mx-auto px-6 lg:px-8 py-20">

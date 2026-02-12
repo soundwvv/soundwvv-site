@@ -7,9 +7,11 @@ const LoadingScreen = ({ onLoadingComplete }) => {
 
   useEffect(() => {
     // Fetch the Lottie JSON animation
-    fetch('https://customer-assets.emergentagent.com/job_beat-space/artifacts/7q0ii5um_Soundwav_Loop_WhiteLogo.json')
+    fetch('https://customer-assets.emergentagent.com/job_beat-space/artifacts/c384i480_Soundwav_Loop_WhiteLogo.json')
       .then(response => response.json())
-      .then(data => setAnimationData(data))
+      .then(data => {
+        setAnimationData(data);
+      })
       .catch(error => console.error('Error loading animation:', error));
 
     // Loading duration (4-5 seconds)
@@ -37,12 +39,12 @@ const LoadingScreen = ({ onLoadingComplete }) => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/l91nk0mj_BLACKSTARRYWAVES10296176-hd_1920_1080_25fps.mp4" type="video/mp4" />
+        <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/n4d7d21v_BLACKSTARRYWAVES10296176-hd_1920_1080_25fps.mp4" type="video/mp4" />
       </video>
 
-      {/* Lottie Animation - Centered with transparent background */}
+      {/* Lottie Animation - Centered with explicit size and high z-index */}
       {animationData && (
-        <div className="relative z-10 w-96 h-96 md:w-[32rem] md:h-[32rem]">
+        <div className="relative z-20" style={{ width: '400px', height: '400px' }}>
           <Lottie 
             animationData={animationData} 
             loop={true}

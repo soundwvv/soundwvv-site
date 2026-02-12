@@ -40,7 +40,7 @@ const ServicesSectionNew = () => {
             </p>
           </div>
 
-          {/* Service Tiers */}
+          {/* Service Tiers - Reduced font size by ~15% */}
           <div className="space-y-0 flex-grow">
             {Object.entries(services).map(([key, service]) => (
               <div key={key} className="border-b border-white/10">
@@ -51,12 +51,12 @@ const ServicesSectionNew = () => {
                 >
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className={`text-6xl lg:text-7xl xl:text-8xl font-light mb-2 transition-colors ${
+                      <h3 className={`text-5xl lg:text-6xl xl:text-[5.5rem] font-light mb-2 transition-colors ${
                         activeService === key ? 'text-white' : 'text-white/40'
                       }`}>
                         {service.title}
                       </h3>
-                      <p className={`text-base lg:text-lg transition-colors ${
+                      <p className={`text-sm lg:text-base transition-colors ${
                         activeService === key ? 'text-white/70' : 'text-white/30'
                       }`}>
                         {service.subtitle}
