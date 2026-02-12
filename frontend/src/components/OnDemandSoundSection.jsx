@@ -9,7 +9,7 @@ const OnDemandSoundSection = () => {
   ];
 
   return (
-    <section className="py-10 lg:py-12 bg-[#0a0a0a] border-t border-white/10">
+    <section className="py-8 lg:py-10 bg-[#0a0a0a]">
       <div className="max-w-[1920px] mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-white text-4xl lg:text-5xl font-light mb-4 tracking-tight">
@@ -19,8 +19,8 @@ const OnDemandSoundSection = () => {
             A la carte services for custom one-off needs.
           </p>
           
-          {/* Vertical list */}
-          <ul className="text-white/80 text-lg lg:text-xl space-y-3 mb-6">
+          {/* Vertical bullet list */}
+          <ul className="text-white/80 text-lg lg:text-xl space-y-2 mb-6 list-disc list-inside">
             {services.map((service, index) => (
               <li key={index} className="hover:text-white transition-colors">
                 {service}

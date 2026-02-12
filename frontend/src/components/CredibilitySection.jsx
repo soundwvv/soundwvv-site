@@ -36,7 +36,6 @@ const CredibilitySection = () => {
         if (entry.isIntersecting && !hasAnimated) {
           setHasAnimated(true);
           
-          // Animate each stat
           stats.forEach((stat) => {
             const duration = 2000;
             const steps = 60;
@@ -81,10 +80,10 @@ const CredibilitySection = () => {
   ];
 
   return (
-    <section id="credibility" className="section-padding bg-black relative overflow-hidden">
-      {/* Stats Section with Video Background - Increased brightness */}
-      <div ref={sectionRef} className="relative mb-20">
-        {/* Background Video - brighter */}
+    <section id="credibility" className="py-16 lg:py-20 bg-black relative overflow-hidden">
+      {/* Stats Section with Video Background - Video fills entire section */}
+      <div ref={sectionRef} className="relative mb-16">
+        {/* Background Video - full coverage */}
         <div className="absolute inset-0">
           <video
             autoPlay
@@ -98,9 +97,9 @@ const CredibilitySection = () => {
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
-        <div className="relative max-w-[1920px] mx-auto px-6 lg:px-8 py-20">
-          <div className="text-center mb-12">
-            <h2 className="section-heading text-white">
+        <div className="relative max-w-[1920px] mx-auto px-6 lg:px-8 py-16">
+          <div className="text-center mb-10">
+            <h2 className="text-white text-4xl lg:text-5xl font-light tracking-tight">
               Our SOUND Track Record
             </h2>
           </div>
@@ -126,22 +125,22 @@ const CredibilitySection = () => {
         </div>
       </div>
 
-      {/* Brand Partners Section */}
+      {/* Brand Partners Section - Slightly smaller logos */}
       <div className="max-w-[1920px] mx-auto px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="section-heading text-white mb-6">
+        <div className="text-center mb-10">
+          <h2 className="text-white text-4xl lg:text-5xl font-light mb-6 tracking-tight">
             Trusted by Brand Partners
           </h2>
-          <p className="body-large text-mid-grey max-w-3xl mx-auto">
+          <p className="text-white/60 text-lg lg:text-xl max-w-3xl mx-auto">
             Selected venues and global brand environments we've supported.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {clients.map((client) => (
             <div
               key={client.id}
-              className="aspect-square bg-white rounded-lg overflow-hidden hover:shadow-xl transition-all hover:transform hover:scale-105 group flex items-center justify-center p-8"
+              className="aspect-square bg-white rounded-lg overflow-hidden hover:shadow-xl transition-all hover:transform hover:scale-105 group flex items-center justify-center p-6"
             >
               <img
                 src={client.logo}
