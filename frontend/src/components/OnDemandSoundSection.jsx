@@ -9,21 +9,22 @@ const OnDemandSoundSection = () => {
   ];
 
   return (
-    <section className="py-8 lg:py-10 bg-[#0a0a0a]">
+    <section className="py-6 lg:py-8 bg-[#0a0a0a]">
       <div className="max-w-[1920px] mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-white text-4xl lg:text-5xl font-light mb-4 tracking-tight">
             On-Demand Sound
           </h2>
-          <p className="text-white/60 text-lg lg:text-xl font-light mb-8">
+          <p className="text-white/60 text-lg lg:text-xl font-light mb-6">
             A la carte services for custom one-off needs.
           </p>
           
-          {/* Vertical bullet list */}
-          <ul className="text-white/80 text-lg lg:text-xl space-y-2 mb-6 list-disc list-inside">
+          {/* Consistent bullet list with tighter spacing */}
+          <ul className="text-white/80 text-lg lg:text-xl space-y-1.5 mb-5">
             {services.map((service, index) => (
-              <li key={index} className="hover:text-white transition-colors">
-                {service}
+              <li key={index} className="hover:text-white transition-colors flex items-center justify-center">
+                <span className="mr-2">•</span>
+                <span>{service}</span>
               </li>
             ))}
           </ul>

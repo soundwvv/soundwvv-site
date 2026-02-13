@@ -81,10 +81,10 @@ const CredibilitySection = () => {
 
   return (
     <section id="credibility" className="py-16 lg:py-20 bg-black relative overflow-hidden">
-      {/* Stats Section with Video Background - Video fills entire section */}
-      <div ref={sectionRef} className="relative mb-16">
-        {/* Background Video - full coverage */}
-        <div className="absolute inset-0">
+      {/* Stats Section with Video Background - Video fills entire section, content moved up */}
+      <div ref={sectionRef} className="relative mb-16 min-h-[60vh]">
+        {/* Background Video - full coverage with defined height */}
+        <div className="absolute inset-0 w-full h-full">
           <video
             autoPlay
             loop
@@ -94,11 +94,12 @@ const CredibilitySection = () => {
           >
             <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/rr9433ze_NighttimeDRONErooftop14297607_3840_2160_24fps.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-black/35"></div>
         </div>
 
-        <div className="relative max-w-[1920px] mx-auto px-6 lg:px-8 py-16">
-          <div className="text-center mb-10">
+        {/* Content - positioned slightly above center */}
+        <div className="relative max-w-[1920px] mx-auto px-6 lg:px-8 flex flex-col justify-center min-h-[60vh] py-12">
+          <div className="text-center mb-8">
             <h2 className="text-white text-4xl lg:text-5xl font-light tracking-tight">
               Our SOUND Track Record
             </h2>
@@ -125,7 +126,7 @@ const CredibilitySection = () => {
         </div>
       </div>
 
-      {/* Brand Partners Section - Slightly smaller logos */}
+      {/* Brand Partners Section */}
       <div className="max-w-[1920px] mx-auto px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-white text-4xl lg:text-5xl font-light mb-6 tracking-tight">

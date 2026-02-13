@@ -40,23 +40,27 @@ const ServicesSectionNew = () => {
             </p>
           </div>
 
-          {/* Service Tiers - Further reduced font size for clear hierarchy */}
+          {/* Service Tiers - Further reduced + hover underline effect */}
           <div className="space-y-0 flex-grow">
-            {Object.entries(services).map(([key, service]) => (
-              <div key={key} className="border-b border-white/10">
+            {Object.entries(services).map(([key, service], index) => (
+              <div key={key} className={`border-b border-white/10 ${index === 0 ? 'border-t border-white/10' : ''}`}>
                 <button
                   onClick={() => setActiveService(key)}
                   onMouseEnter={() => setActiveService(key)}
                   className="w-full text-left py-8 group transition-all"
                 >
                   <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className={`text-4xl lg:text-5xl xl:text-6xl font-light mb-2 transition-colors ${
+                    <div className="relative">
+                      <h3 className={`text-3xl lg:text-4xl xl:text-5xl font-light mb-2 transition-colors ${
                         activeService === key ? 'text-white' : 'text-white/40'
                       }`}>
                         {service.title}
                       </h3>
-                      <p className={`text-xs lg:text-sm transition-colors ${
+                      {/* Hover underline that slides in from left */}
+                      <div className={`h-px bg-white/60 transition-all duration-300 origin-left ${
+                        activeService === key ? 'scale-x-100' : 'scale-x-0'
+                      }`}></div>
+                      <p className={`text-xs lg:text-sm transition-colors mt-2 ${
                         activeService === key ? 'text-white/70' : 'text-white/30'
                       }`}>
                         {service.subtitle}
@@ -95,17 +99,14 @@ const ServicesSectionNew = () => {
                 activeService === key ? 'opacity-100' : 'opacity-0 pointer-events-none'
               }`}
             >
-              {/* Background Image */}
               <img
                 src={service.image}
                 alt={service.title}
                 className="absolute inset-0 w-full h-full object-cover"
               />
               
-              {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60"></div>
 
-              {/* Text Overlay */}
               <div className="absolute inset-0 flex items-center justify-center p-8 lg:p-12">
                 <div className="max-w-xl">
                   <div className="flex items-center gap-3 mb-6">
