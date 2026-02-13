@@ -80,26 +80,53 @@ const CredibilitySection = () => {
   ];
 
   return (
-    <section id="credibility" className="py-16 lg:py-20 bg-black relative overflow-hidden">
-      {/* Stats Section with Video Background - Video fills entire section, content moved up */}
-      <div ref={sectionRef} className="relative mb-16 min-h-[60vh]">
-        {/* Background Video - full coverage with defined height */}
-        <div className="absolute inset-0 w-full h-full">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-50"
-          >
-            <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/rr9433ze_NighttimeDRONErooftop14297607_3840_2160_24fps.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-black/35"></div>
-        </div>
+    <section id="credibility" className="bg-black relative overflow-hidden">
+      {/* Stats Section - Video as true background, no padding/margin top */}
+      <div 
+        ref={sectionRef} 
+        className="relative min-h-[70vh] flex items-center justify-center"
+        style={{
+          backgroundImage: 'url()',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          margin: 0,
+          padding: 0
+        }}
+      >
+        {/* Background Video - True background, fills completely */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            zIndex: 0
+          }}
+        >
+          <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/rr9433ze_NighttimeDRONErooftop14297607_3840_2160_24fps.mp4" type="video/mp4" />
+        </video>
+        
+        {/* Subtle readability overlay only */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(0, 0, 0, 0.3)',
+          zIndex: 1
+        }}></div>
 
-        {/* Content - positioned slightly above center */}
-        <div className="relative max-w-[1920px] mx-auto px-6 lg:px-8 flex flex-col justify-center min-h-[60vh] py-12">
-          <div className="text-center mb-8">
+        {/* Content */}
+        <div className="relative z-10 max-w-[1920px] mx-auto px-6 lg:px-8 py-16 w-full">
+          <div className="text-center mb-10">
             <h2 className="text-white text-4xl lg:text-5xl font-light tracking-tight">
               Our SOUND Track Record
             </h2>
@@ -107,10 +134,7 @@ const CredibilitySection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {stats.map((stat) => (
-              <div
-                key={stat.id}
-                className="text-center"
-              >
+              <div key={stat.id} className="text-center">
                 <div 
                   className="text-6xl lg:text-7xl font-light mb-3"
                   style={{ color: stat.color }}
@@ -127,7 +151,7 @@ const CredibilitySection = () => {
       </div>
 
       {/* Brand Partners Section */}
-      <div className="max-w-[1920px] mx-auto px-6 lg:px-8">
+      <div className="py-16 lg:py-20 max-w-[1920px] mx-auto px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-white text-4xl lg:text-5xl font-light mb-6 tracking-tight">
             Trusted by Brand Partners
