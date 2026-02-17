@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,11 +17,29 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // If on home page, scroll to section
+    if (location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setIsMobileMenuOpen(false);
+      }
+    } else {
+      // Navigate to home then scroll
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
       setIsMobileMenuOpen(false);
     }
+  };
+
+  const handleAboutClick = () => {
+    navigate('/about');
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -37,7 +57,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <button onClick={() => scrollToSection('about')} className="nav-link">
+            <button onClick={handleAboutClick} className="nav-link">
               About
             </button>
             <button onClick={() => scrollToSection('services')} className="nav-link">
@@ -65,7 +85,7 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-black/98 backdrop-blur-md border-t border-white/10">
             <div className="flex flex-col gap-4 p-6">
-              <button onClick={() => scrollToSection('about')} className="nav-link text-left">
+              <button onClick={handleAboutClick} className="nav-link text-left">
                 About
               </button>
               <button onClick={() => scrollToSection('services')} className="nav-link text-left">
