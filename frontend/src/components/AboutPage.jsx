@@ -170,25 +170,23 @@ const AboutPage = () => {
             music designed to serve the space, the brand, and the people inside it.
           </p>
 
-          {/* Thin divider line - 1px charcoal */}
+          {/* Thin divider line - 1px charcoal, 60px spacing above CTA */}
           <div 
             style={{ 
               height: '1px', 
               backgroundColor: '#333333',
-              marginTop: '60px',
-              marginBottom: '60px'
+              marginTop: '60px'
             }}
           />
 
-          {/* CTA Section - centered, 28px headline, generous top spacing */}
-          <div className="text-center">
+          {/* CTA Section - centered, 28px headline, 60px top spacing */}
+          <div className="text-center" style={{ paddingTop: '60px' }}>
             <p 
               className="text-white font-semibold tracking-tight"
               style={{ 
                 fontSize: '28px', 
                 lineHeight: '1.25',
-                marginBottom: '32px',
-                whiteSpace: 'nowrap'
+                marginBottom: '32px'
               }}
             >
               Let's design how your brand sounds.
@@ -197,10 +195,10 @@ const AboutPage = () => {
             <button 
               onClick={() => navigate('/')}
               data-testid="explore-services-btn"
-              className="group bg-white text-black px-8 py-3 rounded-full font-medium text-sm uppercase tracking-wider hover:bg-white/90 transition-all inline-flex items-center gap-2"
+              className="group bg-white text-black px-6 py-2.5 rounded-full font-medium text-[13px] uppercase tracking-wider hover:bg-white/90 transition-all inline-flex items-center gap-2"
             >
               Explore Services
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
 
