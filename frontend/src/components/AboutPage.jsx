@@ -15,15 +15,14 @@ const AboutPage = () => {
       <article className="bg-black" style={{ paddingTop: '140px', paddingBottom: '100px' }}>
         <div className="mx-auto px-6" style={{ maxWidth: '660px' }}>
           
-          {/* Hero Headline - 38px, tighter line height, fits 2 lines */}
+          {/* Hero Headline - 36px, fits cleanly on 2 lines */}
           <h1 
             className="text-white font-medium"
             style={{ 
-              fontSize: '38px', 
-              lineHeight: '1.15',
-              letterSpacing: '-0.02em',
-              marginBottom: '28px',
-              maxWidth: '720px'
+              fontSize: '36px', 
+              lineHeight: '1.18',
+              letterSpacing: '-0.015em',
+              marginBottom: '28px'
             }}
           >
             We design how brands and spaces are experienced through sound.
