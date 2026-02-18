@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { ChevronRight, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const ServicesSectionNew = () => {
   const [activeService, setActiveService] = useState('CORE');
+  const navigate = useNavigate();
 
   const services = {
     CORE: {
