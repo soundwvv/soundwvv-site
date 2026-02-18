@@ -38,14 +38,6 @@ const ServicesPage = () => {
     }
   ];
 
-  const aLaCarteServices = [
-    { name: 'Live DJ sets', icon: Headphones },
-    { name: 'Custom playlists and DJ mixes', icon: ListMusic },
-    { name: 'Music consulting', icon: MessageSquare },
-    { name: 'Event series partnerships', icon: Calendar },
-    { name: 'DJ lessons', icon: GraduationCap }
-  ];
-
   const processSteps = [
     {
       number: '1',
@@ -105,7 +97,7 @@ const ServicesPage = () => {
       <section style={{ paddingBottom: '100px' }}>
         <div className="mx-auto px-6" style={{ maxWidth: '1140px' }}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {tiers.map((tier, index) => (
+            {tiers.map((tier) => (
               <div 
                 key={tier.name}
                 className="border border-white/10 rounded-sm p-8"
@@ -211,26 +203,26 @@ const ServicesPage = () => {
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" style={{ maxWidth: '800px' }}>
-            {aLaCarteServices.map((service, index) => (
-              <div 
-                key={service.name}
-                className="flex items-center gap-3"
-                style={{ padding: '12px 0' }}
-              >
-                <service.icon 
-                  size={18} 
-                  style={{ color: 'rgba(255, 255, 255, 0.4)', flexShrink: 0 }} 
-                />
-                <span 
-                  style={{ 
-                    fontSize: '15px', 
-                    color: 'rgba(255, 255, 255, 0.7)' 
-                  }}
-                >
-                  {service.name}
-                </span>
-              </div>
-            ))}
+            <div className="flex items-center gap-3" style={{ padding: '12px 0' }}>
+              <Headphones size={18} style={{ color: 'rgba(255, 255, 255, 0.4)', flexShrink: 0 }} />
+              <span style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.7)' }}>Live DJ sets</span>
+            </div>
+            <div className="flex items-center gap-3" style={{ padding: '12px 0' }}>
+              <ListMusic size={18} style={{ color: 'rgba(255, 255, 255, 0.4)', flexShrink: 0 }} />
+              <span style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.7)' }}>Custom playlists and DJ mixes</span>
+            </div>
+            <div className="flex items-center gap-3" style={{ padding: '12px 0' }}>
+              <MessageSquare size={18} style={{ color: 'rgba(255, 255, 255, 0.4)', flexShrink: 0 }} />
+              <span style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.7)' }}>Music consulting</span>
+            </div>
+            <div className="flex items-center gap-3" style={{ padding: '12px 0' }}>
+              <Calendar size={18} style={{ color: 'rgba(255, 255, 255, 0.4)', flexShrink: 0 }} />
+              <span style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.7)' }}>Event series partnerships</span>
+            </div>
+            <div className="flex items-center gap-3" style={{ padding: '12px 0' }}>
+              <GraduationCap size={18} style={{ color: 'rgba(255, 255, 255, 0.4)', flexShrink: 0 }} />
+              <span style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.7)' }}>DJ lessons</span>
+            </div>
           </div>
         </div>
       </section>
@@ -259,9 +251,9 @@ const ServicesPage = () => {
               >
                 <div className="flex items-center gap-4" style={{ marginBottom: '12px' }}>
                   <span 
-                    className="text-white font-medium"
                     style={{ 
                       fontSize: '14px',
+                      fontWeight: '500',
                       color: 'rgba(255, 255, 255, 0.5)'
                     }}
                   >
