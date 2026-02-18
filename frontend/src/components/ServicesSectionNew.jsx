@@ -83,7 +83,7 @@ const ServicesSectionNew = () => {
           {/* CTA Button */}
           <div className="mt-12">
             <button 
-              onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => navigate('/services')}
               className="group bg-white text-black px-8 py-4 rounded-full font-medium text-sm uppercase tracking-wider hover:bg-white/90 transition-all flex items-center gap-3"
             >
               View Services
