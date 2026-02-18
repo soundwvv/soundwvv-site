@@ -93,7 +93,7 @@ const Navbar = () => {
               <button onClick={handleAboutClick} className="nav-link text-left">
                 About
               </button>
-              <button onClick={() => scrollToSection('services')} className="nav-link text-left">
+              <button onClick={handleServicesClick} className="nav-link text-left">
                 Services
               </button>
               <button onClick={() => scrollToSection('contact')} className="nav-link text-left">
