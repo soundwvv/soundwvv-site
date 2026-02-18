@@ -15,12 +15,12 @@ const AboutPage = () => {
       <article className="bg-black" style={{ paddingTop: '140px', paddingBottom: '100px' }}>
         <div className="mx-auto px-6" style={{ maxWidth: '660px' }}>
           
-          {/* Hero Headline - ~40px, tighter line height, max 2 lines */}
+          {/* Hero Headline - 38px, tighter line height, fits 2 lines */}
           <h1 
             className="text-white font-medium"
             style={{ 
-              fontSize: '40px', 
-              lineHeight: '1.12',
+              fontSize: '38px', 
+              lineHeight: '1.15',
               letterSpacing: '-0.02em',
               marginBottom: '28px'
             }}
