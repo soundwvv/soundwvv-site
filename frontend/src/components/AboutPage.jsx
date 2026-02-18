@@ -8,7 +8,7 @@ const AboutPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-black min-h-screen">
+    <div className="bg-black min-h-screen" data-testid="about-page">
       <Navbar />
       
       {/* Pure editorial single column manifesto */}
@@ -62,58 +62,59 @@ const AboutPage = () => {
             </p>
           </div>
 
-          {/* Body paragraphs */}
-          <div style={{ marginBottom: '60px' }}>
-            <p 
-              style={{ 
-                fontSize: '17px', 
-                lineHeight: '1.65',
-                color: '#CFCFCF',
-                marginBottom: '24px'
-              }}
-            >
-              Music shapes perception.
-            </p>
-            <p 
-              style={{ 
-                fontSize: '17px', 
-                lineHeight: '1.65',
-                color: '#CFCFCF',
-                marginBottom: '24px'
-              }}
-            >
-              It sets pace.
-            </p>
-            <p 
-              style={{ 
-                fontSize: '17px', 
-                lineHeight: '1.65',
-                color: '#CFCFCF',
-                marginBottom: '24px'
-              }}
-            >
-              It defines atmosphere.
-            </p>
-            <p 
-              style={{ 
-                fontSize: '17px', 
-                lineHeight: '1.65',
-                color: '#CFCFCF',
-                marginBottom: '24px'
-              }}
-            >
-              SOUNDWVV focuses on how sound functions inside a space — how it supports the brand, guides energy, and aligns with how an environment is meant to be experienced.
-            </p>
-            <p 
-              style={{ 
-                fontSize: '17px', 
-                lineHeight: '1.65',
-                color: '#CFCFCF'
-              }}
-            >
-              We design music programs for daily use and long-term consistency, not one-off moments.
-            </p>
-          </div>
+          {/* Short poetic lines */}
+          <p 
+            style={{ 
+              fontSize: '17px', 
+              lineHeight: '1.65',
+              color: '#CFCFCF',
+              marginBottom: '24px'
+            }}
+          >
+            Music shapes perception.
+          </p>
+          <p 
+            style={{ 
+              fontSize: '17px', 
+              lineHeight: '1.65',
+              color: '#CFCFCF',
+              marginBottom: '24px'
+            }}
+          >
+            It sets pace.
+          </p>
+          <p 
+            style={{ 
+              fontSize: '17px', 
+              lineHeight: '1.65',
+              color: '#CFCFCF',
+              marginBottom: '24px'
+            }}
+          >
+            It defines atmosphere.
+          </p>
+          
+          {/* Longer body paragraphs */}
+          <p 
+            style={{ 
+              fontSize: '17px', 
+              lineHeight: '1.65',
+              color: '#CFCFCF',
+              marginBottom: '24px'
+            }}
+          >
+            SOUNDWVV focuses on how sound functions inside a space — how it supports the brand, guides energy, and aligns with how an environment is meant to be experienced.
+          </p>
+          <p 
+            style={{ 
+              fontSize: '17px', 
+              lineHeight: '1.65',
+              color: '#CFCFCF',
+              marginBottom: '60px'
+            }}
+          >
+            We design music programs for daily use and long-term consistency, not one-off moments.
+          </p>
 
           {/* Sub section header - 24px, medium weight */}
           <h2 
