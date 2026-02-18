@@ -1,65 +1,11 @@
 import React from 'react';
-import { ArrowRight, Headphones, ListMusic, MessageSquare, Calendar, GraduationCap } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
 const ServicesPage = () => {
   const navigate = useNavigate();
-
-  const tiers = [
-    {
-      name: 'CORE',
-      description: 'CORE establishes a consistent sound system for your space. It defines direction, cadence, and tone through structured monthly programming.',
-      includes: [
-        'One curated playlist per month',
-        'Custom sound identity consultation',
-        'Monthly refresh and sound strategy check-in'
-      ]
-    },
-    {
-      name: 'FLOW',
-      description: 'FLOW expands your sound program with greater range and variation. It introduces rotating playlists and custom mixes while maintaining clear structure.',
-      includes: [
-        'Up to two rotating playlists per quarter',
-        'One custom curated DJ mix per quarter',
-        'Priority updates and support'
-      ]
-    },
-    {
-      name: 'WAVE',
-      description: 'WAVE is a comprehensive sound partnership. It integrates expanded programming, custom mixes, and ongoing refinement into a fully managed system.',
-      includes: [
-        'Up to four rotating playlists per quarter',
-        'Up to two custom curated DJ mixes per quarter',
-        'Ongoing sound management and quarterly refinement',
-        'Priority support'
-      ]
-    }
-  ];
-
-  const processSteps = [
-    {
-      number: '1',
-      title: 'Discovery',
-      description: 'We begin with a focused consultation to understand your brand, space, audience, and operational needs.'
-    },
-    {
-      number: '2',
-      title: 'Sound Direction',
-      description: 'We define your tone, pacing, and programming structure based on how your space functions day to day.'
-    },
-    {
-      number: '3',
-      title: 'Implementation',
-      description: 'Playlists and mixes are built and deployed in alignment with your schedule and environment.'
-    },
-    {
-      number: '4',
-      title: 'Ongoing Management',
-      description: 'We review, refine, and adjust based on performance, feedback, and seasonal shifts.'
-    }
-  ];
 
   return (
     <div className="bg-black min-h-screen" data-testid="services-page">
@@ -97,71 +43,112 @@ const ServicesPage = () => {
       <section style={{ paddingBottom: '100px' }}>
         <div className="mx-auto px-6" style={{ maxWidth: '1140px' }}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {tiers.map((tier) => (
-              <div 
-                key={tier.name}
-                className="border border-white/10 rounded-sm p-8"
-                style={{ backgroundColor: 'rgba(255, 255, 255, 0.02)' }}
-                data-testid={`tier-${tier.name.toLowerCase()}`}
+            
+            {/* CORE Tier */}
+            <div 
+              className="border border-white/10 rounded-sm p-8"
+              style={{ backgroundColor: 'rgba(255, 255, 255, 0.02)' }}
+              data-testid="tier-core"
+            >
+              <h3 
+                className="text-white font-medium"
+                style={{ fontSize: '20px', letterSpacing: '0.05em', marginBottom: '20px' }}
               >
-                <h3 
-                  className="text-white font-medium"
-                  style={{ 
-                    fontSize: '20px', 
-                    letterSpacing: '0.05em',
-                    marginBottom: '20px'
-                  }}
-                >
-                  {tier.name}
-                </h3>
-                <p 
-                  style={{ 
-                    fontSize: '15px', 
-                    lineHeight: '1.6',
-                    color: 'rgba(255, 255, 255, 0.65)',
-                    marginBottom: '28px'
-                  }}
-                >
-                  {tier.description}
-                </p>
-                <p 
-                  className="text-white font-medium"
-                  style={{ 
-                    fontSize: '13px', 
-                    letterSpacing: '0.03em',
-                    marginBottom: '16px'
-                  }}
-                >
-                  Includes:
-                </p>
-                <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
-                  {tier.includes.map((item, i) => (
-                    <li 
-                      key={i}
-                      style={{ 
-                        fontSize: '14px', 
-                        lineHeight: '1.5',
-                        color: 'rgba(255, 255, 255, 0.6)',
-                        marginBottom: '10px',
-                        paddingLeft: '16px',
-                        position: 'relative'
-                      }}
-                    >
-                      <span 
-                        style={{ 
-                          position: 'absolute', 
-                          left: 0, 
-                          color: 'rgba(255, 255, 255, 0.4)' 
-                        }}
-                      >
-                        –
-                      </span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+                CORE
+              </h3>
+              <p style={{ fontSize: '15px', lineHeight: '1.6', color: 'rgba(255, 255, 255, 0.65)', marginBottom: '28px' }}>
+                CORE establishes a consistent sound system for your space. It defines direction, cadence, and tone through structured monthly programming.
+              </p>
+              <p className="text-white font-medium" style={{ fontSize: '13px', letterSpacing: '0.03em', marginBottom: '16px' }}>
+                Includes:
+              </p>
+              <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+                <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '10px', paddingLeft: '16px', position: 'relative' }}>
+                  <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
+                  One curated playlist per month
+                </li>
+                <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '10px', paddingLeft: '16px', position: 'relative' }}>
+                  <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
+                  Custom sound identity consultation
+                </li>
+                <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', paddingLeft: '16px', position: 'relative' }}>
+                  <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
+                  Monthly refresh and sound strategy check-in
+                </li>
+              </ul>
+            </div>
+
+            {/* FLOW Tier */}
+            <div 
+              className="border border-white/10 rounded-sm p-8"
+              style={{ backgroundColor: 'rgba(255, 255, 255, 0.02)' }}
+              data-testid="tier-flow"
+            >
+              <h3 
+                className="text-white font-medium"
+                style={{ fontSize: '20px', letterSpacing: '0.05em', marginBottom: '20px' }}
+              >
+                FLOW
+              </h3>
+              <p style={{ fontSize: '15px', lineHeight: '1.6', color: 'rgba(255, 255, 255, 0.65)', marginBottom: '28px' }}>
+                FLOW expands your sound program with greater range and variation. It introduces rotating playlists and custom mixes while maintaining clear structure.
+              </p>
+              <p className="text-white font-medium" style={{ fontSize: '13px', letterSpacing: '0.03em', marginBottom: '16px' }}>
+                Includes:
+              </p>
+              <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+                <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '10px', paddingLeft: '16px', position: 'relative' }}>
+                  <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
+                  Up to two rotating playlists per quarter
+                </li>
+                <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '10px', paddingLeft: '16px', position: 'relative' }}>
+                  <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
+                  One custom curated DJ mix per quarter
+                </li>
+                <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', paddingLeft: '16px', position: 'relative' }}>
+                  <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
+                  Priority updates and support
+                </li>
+              </ul>
+            </div>
+
+            {/* WAVE Tier */}
+            <div 
+              className="border border-white/10 rounded-sm p-8"
+              style={{ backgroundColor: 'rgba(255, 255, 255, 0.02)' }}
+              data-testid="tier-wave"
+            >
+              <h3 
+                className="text-white font-medium"
+                style={{ fontSize: '20px', letterSpacing: '0.05em', marginBottom: '20px' }}
+              >
+                WAVE
+              </h3>
+              <p style={{ fontSize: '15px', lineHeight: '1.6', color: 'rgba(255, 255, 255, 0.65)', marginBottom: '28px' }}>
+                WAVE is a comprehensive sound partnership. It integrates expanded programming, custom mixes, and ongoing refinement into a fully managed system.
+              </p>
+              <p className="text-white font-medium" style={{ fontSize: '13px', letterSpacing: '0.03em', marginBottom: '16px' }}>
+                Includes:
+              </p>
+              <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+                <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '10px', paddingLeft: '16px', position: 'relative' }}>
+                  <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
+                  Up to four rotating playlists per quarter
+                </li>
+                <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '10px', paddingLeft: '16px', position: 'relative' }}>
+                  <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
+                  Up to two custom curated DJ mixes per quarter
+                </li>
+                <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '10px', paddingLeft: '16px', position: 'relative' }}>
+                  <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
+                  Ongoing sound management and quarterly refinement
+                </li>
+                <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', paddingLeft: '16px', position: 'relative' }}>
+                  <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
+                  Priority support
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -171,58 +158,26 @@ const ServicesPage = () => {
         <div className="mx-auto px-6" style={{ maxWidth: '1140px' }}>
           <h2 
             className="text-white font-medium"
-            style={{ 
-              fontSize: '28px', 
-              lineHeight: '1.2',
-              marginBottom: '20px'
-            }}
+            style={{ fontSize: '28px', lineHeight: '1.2', marginBottom: '20px' }}
           >
             A La Carte — On-Demand Sound
           </h2>
           <p 
-            style={{ 
-              fontSize: '16px', 
-              lineHeight: '1.6',
-              color: 'rgba(255, 255, 255, 0.65)',
-              marginBottom: '40px',
-              maxWidth: '680px'
-            }}
+            style={{ fontSize: '16px', lineHeight: '1.6', color: 'rgba(255, 255, 255, 0.65)', marginBottom: '40px', maxWidth: '680px' }}
           >
             For one-time projects or custom requests, SOUNDWVV offers standalone sound services that can operate independently or complement an existing partnership.
           </p>
           
-          <p 
-            className="text-white font-medium"
-            style={{ 
-              fontSize: '14px', 
-              letterSpacing: '0.03em',
-              marginBottom: '20px'
-            }}
-          >
+          <p className="text-white font-medium" style={{ fontSize: '14px', letterSpacing: '0.03em', marginBottom: '20px' }}>
             Available Services:
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" style={{ maxWidth: '800px' }}>
-            <div className="flex items-center gap-3" style={{ padding: '12px 0' }}>
-              <Headphones size={18} style={{ color: 'rgba(255, 255, 255, 0.4)', flexShrink: 0 }} />
-              <span style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.7)' }}>Live DJ sets</span>
-            </div>
-            <div className="flex items-center gap-3" style={{ padding: '12px 0' }}>
-              <ListMusic size={18} style={{ color: 'rgba(255, 255, 255, 0.4)', flexShrink: 0 }} />
-              <span style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.7)' }}>Custom playlists and DJ mixes</span>
-            </div>
-            <div className="flex items-center gap-3" style={{ padding: '12px 0' }}>
-              <MessageSquare size={18} style={{ color: 'rgba(255, 255, 255, 0.4)', flexShrink: 0 }} />
-              <span style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.7)' }}>Music consulting</span>
-            </div>
-            <div className="flex items-center gap-3" style={{ padding: '12px 0' }}>
-              <Calendar size={18} style={{ color: 'rgba(255, 255, 255, 0.4)', flexShrink: 0 }} />
-              <span style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.7)' }}>Event series partnerships</span>
-            </div>
-            <div className="flex items-center gap-3" style={{ padding: '12px 0' }}>
-              <GraduationCap size={18} style={{ color: 'rgba(255, 255, 255, 0.4)', flexShrink: 0 }} />
-              <span style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.7)' }}>DJ lessons</span>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-3" style={{ maxWidth: '700px' }}>
+            <p style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.7)', padding: '8px 0' }}>Live DJ sets</p>
+            <p style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.7)', padding: '8px 0' }}>Custom playlists and DJ mixes</p>
+            <p style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.7)', padding: '8px 0' }}>Music consulting</p>
+            <p style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.7)', padding: '8px 0' }}>Event series partnerships</p>
+            <p style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.7)', padding: '8px 0' }}>DJ lessons</p>
           </div>
         </div>
       </section>
@@ -232,59 +187,59 @@ const ServicesPage = () => {
         <div className="mx-auto px-6" style={{ maxWidth: '1140px' }}>
           <h2 
             className="text-white font-medium"
-            style={{ 
-              fontSize: '28px', 
-              lineHeight: '1.2',
-              marginBottom: '48px'
-            }}
+            style={{ fontSize: '28px', lineHeight: '1.2', marginBottom: '48px' }}
           >
             How We Work
           </h2>
           
           <div style={{ maxWidth: '640px' }}>
-            {processSteps.map((step, index) => (
-              <div 
-                key={step.number}
-                style={{ 
-                  marginBottom: index < processSteps.length - 1 ? '48px' : 0 
-                }}
-              >
-                <div className="flex items-center gap-4" style={{ marginBottom: '12px' }}>
-                  <span 
-                    style={{ 
-                      fontSize: '14px',
-                      fontWeight: '500',
-                      color: 'rgba(255, 255, 255, 0.5)'
-                    }}
-                  >
-                    {step.number}
-                  </span>
-                  <div 
-                    style={{ 
-                      width: '20px', 
-                      height: '1px', 
-                      backgroundColor: 'rgba(255, 255, 255, 0.2)' 
-                    }} 
-                  />
-                  <h3 
-                    className="text-white font-medium"
-                    style={{ fontSize: '18px' }}
-                  >
-                    {step.title}
-                  </h3>
-                </div>
-                <p 
-                  style={{ 
-                    fontSize: '15px', 
-                    lineHeight: '1.6',
-                    color: 'rgba(255, 255, 255, 0.6)',
-                    paddingLeft: '52px'
-                  }}
-                >
-                  {step.description}
-                </p>
+            {/* Step 1 */}
+            <div style={{ marginBottom: '48px' }}>
+              <div className="flex items-center gap-4" style={{ marginBottom: '12px' }}>
+                <span style={{ fontSize: '14px', fontWeight: '500', color: 'rgba(255, 255, 255, 0.5)' }}>1</span>
+                <div style={{ width: '20px', height: '1px', backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
+                <h3 className="text-white font-medium" style={{ fontSize: '18px' }}>Discovery</h3>
               </div>
-            ))}
+              <p style={{ fontSize: '15px', lineHeight: '1.6', color: 'rgba(255, 255, 255, 0.6)', paddingLeft: '52px' }}>
+                We begin with a focused consultation to understand your brand, space, audience, and operational needs.
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div style={{ marginBottom: '48px' }}>
+              <div className="flex items-center gap-4" style={{ marginBottom: '12px' }}>
+                <span style={{ fontSize: '14px', fontWeight: '500', color: 'rgba(255, 255, 255, 0.5)' }}>2</span>
+                <div style={{ width: '20px', height: '1px', backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
+                <h3 className="text-white font-medium" style={{ fontSize: '18px' }}>Sound Direction</h3>
+              </div>
+              <p style={{ fontSize: '15px', lineHeight: '1.6', color: 'rgba(255, 255, 255, 0.6)', paddingLeft: '52px' }}>
+                We define your tone, pacing, and programming structure based on how your space functions day to day.
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div style={{ marginBottom: '48px' }}>
+              <div className="flex items-center gap-4" style={{ marginBottom: '12px' }}>
+                <span style={{ fontSize: '14px', fontWeight: '500', color: 'rgba(255, 255, 255, 0.5)' }}>3</span>
+                <div style={{ width: '20px', height: '1px', backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
+                <h3 className="text-white font-medium" style={{ fontSize: '18px' }}>Implementation</h3>
+              </div>
+              <p style={{ fontSize: '15px', lineHeight: '1.6', color: 'rgba(255, 255, 255, 0.6)', paddingLeft: '52px' }}>
+                Playlists and mixes are built and deployed in alignment with your schedule and environment.
+              </p>
+            </div>
+
+            {/* Step 4 */}
+            <div>
+              <div className="flex items-center gap-4" style={{ marginBottom: '12px' }}>
+                <span style={{ fontSize: '14px', fontWeight: '500', color: 'rgba(255, 255, 255, 0.5)' }}>4</span>
+                <div style={{ width: '20px', height: '1px', backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
+                <h3 className="text-white font-medium" style={{ fontSize: '18px' }}>Ongoing Management</h3>
+              </div>
+              <p style={{ fontSize: '15px', lineHeight: '1.6', color: 'rgba(255, 255, 255, 0.6)', paddingLeft: '52px' }}>
+                We review, refine, and adjust based on performance, feedback, and seasonal shifts.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -292,35 +247,19 @@ const ServicesPage = () => {
       {/* Final CTA Section */}
       <section style={{ paddingTop: '40px', paddingBottom: '120px' }}>
         <div className="mx-auto px-6" style={{ maxWidth: '1140px' }}>
-          <div 
-            style={{ 
-              borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-              paddingTop: '80px'
-            }}
-          >
+          <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '80px' }}>
             <div className="text-center">
               <h2 
                 className="text-white font-medium"
-                style={{ 
-                  fontSize: '28px', 
-                  lineHeight: '1.3',
-                  marginBottom: '16px'
-                }}
+                style={{ fontSize: '28px', lineHeight: '1.3', marginBottom: '16px' }}
               >
                 Let's define your sound.
               </h2>
-              <p 
-                style={{ 
-                  fontSize: '16px', 
-                  lineHeight: '1.5',
-                  color: 'rgba(255, 255, 255, 0.6)',
-                  marginBottom: '32px'
-                }}
-              >
+              <p style={{ fontSize: '16px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '32px' }}>
                 Select a partnership or schedule a consultation to begin.
               </p>
               <button 
-                onClick={() => navigate('/#contact')}
+                onClick={() => navigate('/')}
                 data-testid="start-consultation-btn"
                 className="group bg-white text-black px-6 py-2.5 rounded-full font-medium text-[13px] uppercase tracking-wider hover:bg-white/90 transition-all inline-flex items-center gap-2"
               >
