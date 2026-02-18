@@ -22,7 +22,8 @@ const AboutPage = () => {
               fontSize: '38px', 
               lineHeight: '1.15',
               letterSpacing: '-0.02em',
-              marginBottom: '28px'
+              marginBottom: '28px',
+              maxWidth: '720px'
             }}
           >
             We design how brands and spaces are experienced through sound.
