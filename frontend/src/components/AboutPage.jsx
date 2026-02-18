@@ -12,181 +12,172 @@ const AboutPage = () => {
       <Navbar />
       
       {/* Pure editorial single column manifesto */}
-      <article className="bg-black" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
+      <article className="bg-black" style={{ paddingTop: '120px', paddingBottom: '100px' }}>
         <div className="mx-auto px-6" style={{ maxWidth: '720px' }}>
           
-          {/* Primary manifesto statement - 32-36px, semi-bold, white, tight line height */}
-          <p 
-            className="text-white font-semibold tracking-tight"
+          {/* Hero Headline - 44-48px, medium weight, 1.15 line height, reduced tracking */}
+          <h1 
+            className="text-white font-medium"
             style={{ 
-              fontSize: '34px', 
-              lineHeight: '1.22',
-              marginBottom: '24px'
+              fontSize: '46px', 
+              lineHeight: '1.15',
+              letterSpacing: '-0.02em',
+              marginBottom: '32px'
             }}
           >
             We design how brands and spaces are experienced through sound.
-          </p>
+          </h1>
           
-          {/* Body text - 17px, regular weight, light gray (#CFCFCF), 1.65 line height */}
+          {/* Intro Paragraph - Body text 16px, 1.6 line height, muted white */}
           <p 
             style={{ 
-              fontSize: '17px', 
-              lineHeight: '1.65',
-              color: '#CFCFCF',
+              fontSize: '16px', 
+              lineHeight: '1.6',
+              color: 'rgba(255, 255, 255, 0.75)',
               fontWeight: '400',
-              marginBottom: '60px'
+              marginBottom: '80px'
             }}
           >
             SOUNDWVV develops structured music direction and long-term programming for hospitality venues, retail environments, global brands, and live events — building sound systems that are intentional, adaptable, and built to last.
           </p>
 
-          {/* Stacked manifesto lines - 32-36px, semi-bold, white, tight line height */}
+          {/* Section Headline - 32px, medium weight, tight stacking */}
           <p 
-            className="text-white font-semibold tracking-tight"
+            className="text-white font-medium"
             style={{ 
-              fontSize: '34px', 
-              lineHeight: '1.22',
-              marginBottom: '8px'
+              fontSize: '32px', 
+              lineHeight: '1.2',
+              marginBottom: '4px'
             }}
           >
             More than playlists.
           </p>
           <p 
-            className="text-white font-semibold tracking-tight"
+            className="text-white font-medium"
             style={{ 
-              fontSize: '34px', 
-              lineHeight: '1.22',
-              marginBottom: '24px'
+              fontSize: '32px', 
+              lineHeight: '1.2',
+              marginBottom: '32px'
             }}
           >
             More than DJ bookings.
           </p>
 
-          {/* Short poetic lines - body text style */}
+          {/* Short statements - 18px, increased line spacing between each */}
           <p 
             style={{ 
-              fontSize: '17px', 
-              lineHeight: '1.65',
-              color: '#CFCFCF',
+              fontSize: '18px', 
+              lineHeight: '1.5',
+              color: 'rgba(255, 255, 255, 0.75)',
               fontWeight: '400',
-              marginBottom: '24px'
+              marginBottom: '20px'
             }}
           >
             Music shapes perception.
           </p>
           <p 
             style={{ 
-              fontSize: '17px', 
-              lineHeight: '1.65',
-              color: '#CFCFCF',
+              fontSize: '18px', 
+              lineHeight: '1.5',
+              color: 'rgba(255, 255, 255, 0.75)',
               fontWeight: '400',
-              marginBottom: '24px'
+              marginBottom: '20px'
             }}
           >
             It sets pace.
           </p>
           <p 
             style={{ 
-              fontSize: '17px', 
-              lineHeight: '1.65',
-              color: '#CFCFCF',
+              fontSize: '18px', 
+              lineHeight: '1.5',
+              color: 'rgba(255, 255, 255, 0.75)',
               fontWeight: '400',
-              marginBottom: '24px'
+              marginBottom: '32px'
             }}
           >
             It defines atmosphere.
           </p>
           
-          {/* Longer body paragraphs */}
+          {/* Body paragraphs - 16px consistent */}
           <p 
             style={{ 
-              fontSize: '17px', 
-              lineHeight: '1.65',
-              color: '#CFCFCF',
+              fontSize: '16px', 
+              lineHeight: '1.6',
+              color: 'rgba(255, 255, 255, 0.75)',
               fontWeight: '400',
               marginBottom: '24px'
             }}
           >
-            SOUNDWVV focuses on how sound functions inside a space — how it supports the brand, guides energy, and aligns with how an environment is meant to be experienced.
+            SOUNDWVV focuses on how sound functions inside a space — how it supports the brand, guides energy, and aligns with how an environment is intended to feel.
           </p>
           <p 
             style={{ 
-              fontSize: '17px', 
-              lineHeight: '1.65',
-              color: '#CFCFCF',
+              fontSize: '16px', 
+              lineHeight: '1.6',
+              color: 'rgba(255, 255, 255, 0.75)',
               fontWeight: '400',
-              marginBottom: '60px'
+              marginBottom: '48px'
             }}
           >
-            We design music programs for daily use and long-term consistency, not one-off moments.
+            We curate music programs for daily use and long-term consistency, with the flexibility to support singular moments when the occasion calls for it.
           </p>
 
-          {/* Sub section header - 24px, medium weight, 60px margin above, 20px margin below */}
+          {/* Subsection Headline - 24px, medium weight, connected spacing */}
           <h2 
-            className="text-white font-medium tracking-tight"
+            className="text-white font-medium"
             style={{ 
               fontSize: '24px', 
-              lineHeight: '1.25',
-              marginTop: '60px',
-              marginBottom: '20px'
+              lineHeight: '1.3',
+              marginBottom: '24px'
             }}
           >
             Grounded in real-world experience.
           </h2>
           
-          {/* Body text */}
+          {/* Body text - 16px consistent */}
           <p 
             style={{ 
-              fontSize: '17px', 
-              lineHeight: '1.65',
-              color: '#CFCFCF',
+              fontSize: '16px', 
+              lineHeight: '1.6',
+              color: 'rgba(255, 255, 255, 0.75)',
               fontWeight: '400',
               marginBottom: '24px'
             }}
           >
-            Years of hands-on music curation and international DJ performance inform the work — from intimate spaces to global stages.
+            Years of DJ performance and music curation across global spaces and brands shape the studio's perspective.
           </p>
           
           <p 
             style={{ 
-              fontSize: '17px', 
-              lineHeight: '1.65',
-              color: '#CFCFCF',
-              fontWeight: '400',
-              marginBottom: '24px'
-            }}
-          >
-            The focus remains the same:
-          </p>
-          
-          <p 
-            style={{ 
-              fontSize: '17px', 
-              lineHeight: '1.65',
-              color: '#CFCFCF',
+              fontSize: '16px', 
+              lineHeight: '1.6',
+              color: 'rgba(255, 255, 255, 0.75)',
               fontWeight: '400'
             }}
           >
-            music designed to serve the space, the brand, and the people inside it.
+            From intimate venues to international stages, the focus has remained the same — music designed to serve the space, the brand, and the people inside it.
           </p>
 
-          {/* Thin divider line - 1px charcoal, 60px spacing above CTA */}
+          {/* Subtle 1px divider above CTA */}
           <div 
             style={{ 
               height: '1px', 
-              backgroundColor: '#333333',
-              marginTop: '60px'
+              backgroundColor: 'rgba(255, 255, 255, 0.15)',
+              marginTop: '80px',
+              marginBottom: '60px'
             }}
           />
 
-          {/* CTA Section - centered, 28px headline, 60px top spacing */}
-          <div className="text-center" style={{ paddingTop: '60px' }}>
+          {/* CTA Section - Centered */}
+          <div className="text-center">
+            {/* CTA Headline - 28px, medium weight, prevent line break */}
             <p 
-              className="text-white font-semibold tracking-tight"
+              className="text-white font-medium"
               style={{ 
                 fontSize: '28px', 
-                lineHeight: '1.25',
-                marginBottom: '32px'
+                lineHeight: '1.3',
+                marginBottom: '32px',
+                maxWidth: '100%'
               }}
             >
               Let's design how your brand sounds.
