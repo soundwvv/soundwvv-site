@@ -27,47 +27,48 @@ const AboutPage = () => {
             We design how brands and spaces are experienced through sound.
           </p>
           
-          {/* Body text - 17px, regular weight, light gray, 1.65 line height */}
+          {/* Body text - 17px, regular weight, light gray (#CFCFCF), 1.65 line height */}
           <p 
             style={{ 
               fontSize: '17px', 
               lineHeight: '1.65',
               color: '#CFCFCF',
+              fontWeight: '400',
               marginBottom: '60px'
             }}
           >
             SOUNDWVV develops structured music direction and long-term programming for hospitality venues, retail environments, global brands, and live events — building sound systems that are intentional, adaptable, and built to last.
           </p>
 
-          {/* Stacked manifesto lines - 32-36px, semi-bold, white */}
-          <div style={{ marginBottom: '24px' }}>
-            <p 
-              className="text-white font-semibold tracking-tight"
-              style={{ 
-                fontSize: '34px', 
-                lineHeight: '1.22',
-                marginBottom: '8px'
-              }}
-            >
-              More than playlists.
-            </p>
-            <p 
-              className="text-white font-semibold tracking-tight"
-              style={{ 
-                fontSize: '34px', 
-                lineHeight: '1.22'
-              }}
-            >
-              More than DJ bookings.
-            </p>
-          </div>
+          {/* Stacked manifesto lines - 32-36px, semi-bold, white, tight line height */}
+          <p 
+            className="text-white font-semibold tracking-tight"
+            style={{ 
+              fontSize: '34px', 
+              lineHeight: '1.22',
+              marginBottom: '8px'
+            }}
+          >
+            More than playlists.
+          </p>
+          <p 
+            className="text-white font-semibold tracking-tight"
+            style={{ 
+              fontSize: '34px', 
+              lineHeight: '1.22',
+              marginBottom: '24px'
+            }}
+          >
+            More than DJ bookings.
+          </p>
 
-          {/* Short poetic lines */}
+          {/* Short poetic lines - body text style */}
           <p 
             style={{ 
               fontSize: '17px', 
               lineHeight: '1.65',
               color: '#CFCFCF',
+              fontWeight: '400',
               marginBottom: '24px'
             }}
           >
@@ -78,6 +79,7 @@ const AboutPage = () => {
               fontSize: '17px', 
               lineHeight: '1.65',
               color: '#CFCFCF',
+              fontWeight: '400',
               marginBottom: '24px'
             }}
           >
@@ -88,6 +90,7 @@ const AboutPage = () => {
               fontSize: '17px', 
               lineHeight: '1.65',
               color: '#CFCFCF',
+              fontWeight: '400',
               marginBottom: '24px'
             }}
           >
@@ -100,6 +103,7 @@ const AboutPage = () => {
               fontSize: '17px', 
               lineHeight: '1.65',
               color: '#CFCFCF',
+              fontWeight: '400',
               marginBottom: '24px'
             }}
           >
@@ -110,13 +114,14 @@ const AboutPage = () => {
               fontSize: '17px', 
               lineHeight: '1.65',
               color: '#CFCFCF',
+              fontWeight: '400',
               marginBottom: '60px'
             }}
           >
             We design music programs for daily use and long-term consistency, not one-off moments.
           </p>
 
-          {/* Sub section header - 24px, medium weight */}
+          {/* Sub section header - 24px, medium weight, 60px margin above, 20px margin below */}
           <h2 
             className="text-white font-medium tracking-tight"
             style={{ 
@@ -135,6 +140,7 @@ const AboutPage = () => {
               fontSize: '17px', 
               lineHeight: '1.65',
               color: '#CFCFCF',
+              fontWeight: '400',
               marginBottom: '24px'
             }}
           >
@@ -146,6 +152,7 @@ const AboutPage = () => {
               fontSize: '17px', 
               lineHeight: '1.65',
               color: '#CFCFCF',
+              fontWeight: '400',
               marginBottom: '24px'
             }}
           >
@@ -156,7 +163,8 @@ const AboutPage = () => {
             style={{ 
               fontSize: '17px', 
               lineHeight: '1.65',
-              color: '#CFCFCF'
+              color: '#CFCFCF',
+              fontWeight: '400'
             }}
           >
             music designed to serve the space, the brand, and the people inside it.
@@ -172,14 +180,15 @@ const AboutPage = () => {
             }}
           />
 
-          {/* CTA Section - centered */}
+          {/* CTA Section - centered, 28px headline, generous top spacing */}
           <div className="text-center">
             <p 
-              className="text-white font-semibold tracking-tight whitespace-nowrap"
+              className="text-white font-semibold tracking-tight"
               style={{ 
                 fontSize: '28px', 
                 lineHeight: '1.25',
-                marginBottom: '32px'
+                marginBottom: '32px',
+                whiteSpace: 'nowrap'
               }}
             >
               Let's design how your brand sounds.
