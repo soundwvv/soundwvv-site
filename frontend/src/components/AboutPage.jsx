@@ -13,41 +13,41 @@ const AboutPage = () => {
       
       {/* Pure editorial single column manifesto */}
       <article className="bg-black" style={{ paddingTop: '140px', paddingBottom: '100px' }}>
-        <div className="mx-auto px-6" style={{ maxWidth: '720px' }}>
+        <div className="mx-auto px-6" style={{ maxWidth: '660px' }}>
           
-          {/* Main Headline - 42-44px, medium weight, tighter line height */}
+          {/* Hero Headline - ~40px, tighter line height, max 2 lines */}
           <h1 
             className="text-white font-medium"
             style={{ 
-              fontSize: '43px', 
+              fontSize: '40px', 
               lineHeight: '1.12',
               letterSpacing: '-0.02em',
-              marginBottom: '32px'
+              marginBottom: '28px'
             }}
           >
             We design how brands and spaces are experienced through sound.
           </h1>
           
-          {/* Intro Paragraph - Body text 17px, same as all other body copy */}
+          {/* Hero Paragraph - 16px body text, consistent throughout */}
           <p 
             style={{ 
-              fontSize: '17px', 
+              fontSize: '16px', 
               lineHeight: '1.55',
-              color: 'rgba(255, 255, 255, 0.72)',
+              color: 'rgba(255, 255, 255, 0.7)',
               fontWeight: '400',
-              marginBottom: '80px'
+              marginBottom: '72px'
             }}
           >
             SOUNDWVV develops structured music direction and long-term programming for hospitality venues, retail environments, global brands, and live events — building sound systems that are intentional, adaptable, and built to last.
           </p>
 
-          {/* Section Headlines - 28-30px, slightly heavier, stacked */}
+          {/* Section Headline - 26px, ~35% smaller than hero, stacked */}
           <p 
             className="text-white font-medium"
             style={{ 
-              fontSize: '29px', 
+              fontSize: '26px', 
               lineHeight: '1.2',
-              marginBottom: '6px'
+              marginBottom: '5px'
             }}
           >
             More than playlists.
@@ -55,93 +55,94 @@ const AboutPage = () => {
           <p 
             className="text-white font-medium"
             style={{ 
-              fontSize: '29px', 
+              fontSize: '26px', 
               lineHeight: '1.2',
-              marginBottom: '32px'
+              marginBottom: '28px'
             }}
           >
             More than DJ bookings.
           </p>
 
-          {/* Short statements - same size as body, slightly more line spacing */}
+          {/* Short statements - same 16px body size */}
           <p 
             style={{ 
-              fontSize: '17px', 
+              fontSize: '16px', 
               lineHeight: '1.55',
-              color: 'rgba(255, 255, 255, 0.72)',
+              color: 'rgba(255, 255, 255, 0.7)',
               fontWeight: '400',
-              marginBottom: '18px'
+              marginBottom: '16px'
             }}
           >
             Music shapes perception.
           </p>
           <p 
             style={{ 
-              fontSize: '17px', 
+              fontSize: '16px', 
               lineHeight: '1.55',
-              color: 'rgba(255, 255, 255, 0.72)',
+              color: 'rgba(255, 255, 255, 0.7)',
               fontWeight: '400',
-              marginBottom: '18px'
+              marginBottom: '16px'
             }}
           >
             It sets pace.
           </p>
           <p 
             style={{ 
-              fontSize: '17px', 
+              fontSize: '16px', 
               lineHeight: '1.55',
-              color: 'rgba(255, 255, 255, 0.72)',
+              color: 'rgba(255, 255, 255, 0.7)',
               fontWeight: '400',
-              marginBottom: '32px'
+              marginBottom: '28px'
             }}
           >
             It defines atmosphere.
           </p>
           
-          {/* Body paragraphs - 17px consistent */}
+          {/* Body paragraphs - 16px consistent */}
           <p 
             style={{ 
-              fontSize: '17px', 
+              fontSize: '16px', 
               lineHeight: '1.55',
-              color: 'rgba(255, 255, 255, 0.72)',
+              color: 'rgba(255, 255, 255, 0.7)',
               fontWeight: '400',
-              marginBottom: '32px'
+              marginBottom: '28px'
             }}
           >
             SOUNDWVV focuses on how sound functions inside a space — how it supports the brand, guides energy, and aligns with how an environment is intended to feel.
           </p>
           <p 
             style={{ 
-              fontSize: '17px', 
+              fontSize: '16px', 
               lineHeight: '1.55',
-              color: 'rgba(255, 255, 255, 0.72)',
+              color: 'rgba(255, 255, 255, 0.7)',
               fontWeight: '400',
-              marginBottom: '80px'
+              marginBottom: '72px'
             }}
           >
             We curate music programs for daily use and long-term consistency, with the flexibility to support singular moments when the occasion calls for it.
           </p>
 
-          {/* Subsection Headline - 24-26px, medium weight */}
+          {/* Section Headline - 22px, proper hierarchy, more spacing above */}
           <h2 
             className="text-white font-medium"
             style={{ 
-              fontSize: '25px', 
-              lineHeight: '1.25',
-              marginBottom: '32px'
+              fontSize: '22px', 
+              lineHeight: '1.3',
+              marginTop: '16px',
+              marginBottom: '24px'
             }}
           >
             Grounded in real-world experience.
           </h2>
           
-          {/* Body text - 17px consistent */}
+          {/* Body text - 16px consistent */}
           <p 
             style={{ 
-              fontSize: '17px', 
+              fontSize: '16px', 
               lineHeight: '1.55',
-              color: 'rgba(255, 255, 255, 0.72)',
+              color: 'rgba(255, 255, 255, 0.7)',
               fontWeight: '400',
-              marginBottom: '32px'
+              marginBottom: '28px'
             }}
           >
             Years of DJ performance and music curation across global spaces and brands shape the studio's perspective.
@@ -149,9 +150,9 @@ const AboutPage = () => {
           
           <p 
             style={{ 
-              fontSize: '17px', 
+              fontSize: '16px', 
               lineHeight: '1.55',
-              color: 'rgba(255, 255, 255, 0.72)',
+              color: 'rgba(255, 255, 255, 0.7)',
               fontWeight: '400'
             }}
           >
@@ -162,21 +163,21 @@ const AboutPage = () => {
           <div 
             style={{ 
               height: '1px', 
-              backgroundColor: 'rgba(255, 255, 255, 0.12)',
-              marginTop: '80px',
-              marginBottom: '80px'
+              backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              marginTop: '72px',
+              marginBottom: '72px'
             }}
           />
 
-          {/* CTA Section - Centered */}
+          {/* CTA Section - Centered, restrained */}
           <div className="text-center">
-            {/* CTA Headline - 27px, medium weight */}
+            {/* CTA Headline - 24px, restrained */}
             <p 
               className="text-white font-medium"
               style={{ 
-                fontSize: '27px', 
-                lineHeight: '1.25',
-                marginBottom: '32px'
+                fontSize: '24px', 
+                lineHeight: '1.3',
+                marginBottom: '28px'
               }}
             >
               Let's design how your brand sounds.
@@ -185,10 +186,10 @@ const AboutPage = () => {
             <button 
               onClick={() => navigate('/')}
               data-testid="explore-services-btn"
-              className="group bg-white text-black px-6 py-2.5 rounded-full font-medium text-[13px] uppercase tracking-wider hover:bg-white/90 transition-all inline-flex items-center gap-2"
+              className="group bg-white text-black px-5 py-2 rounded-full font-medium text-[12px] uppercase tracking-wider hover:bg-white/90 transition-all inline-flex items-center gap-2"
             >
               Explore Services
-              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
 
