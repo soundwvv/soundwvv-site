@@ -216,7 +216,7 @@ const ServicesPage = () => {
       </section>
 
       {/* How We Work Section */}
-      <section style={{ paddingBottom: '100px' }}>
+      <section style={{ paddingBottom: '75px' }}>
         <div className="mx-auto px-6" style={{ maxWidth: '1140px' }}>
           <h2 
             className="text-white font-medium"
