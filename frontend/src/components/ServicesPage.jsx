@@ -81,7 +81,7 @@ const ServicesPage = () => {
 
             {/* FLOW Tier */}
             <div 
-              className="border border-white/10 rounded-sm p-8 transition-all duration-300 ease-out hover:border-white/25 hover:shadow-[0_0_30px_rgba(255,255,255,0.06)]"
+              className="border border-white/10 rounded-sm p-8 transition-all duration-[220ms] ease-out hover:border-white/25 hover:shadow-[0_0_40px_rgba(255,255,255,0.08)] hover:scale-[1.02]"
               style={{ backgroundColor: 'rgba(255, 255, 255, 0.02)' }}
               data-testid="tier-flow"
             >
