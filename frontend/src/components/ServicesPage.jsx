@@ -146,7 +146,7 @@ const ServicesPage = () => {
                 </li>
                 <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', paddingLeft: '16px', position: 'relative' }}>
                   <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
-                  Dedicated sonic partnership and priority access
+                  Dedicated partnership and priority response
                 </li>
               </ul>
             </div>
