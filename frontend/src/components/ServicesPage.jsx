@@ -187,7 +187,7 @@ const ServicesPage = () => {
                 className="border border-white/8 rounded-sm px-5 py-4 transition-all duration-200 ease-out hover:border-white/20 hover:bg-white/[0.03]"
                 style={{ backgroundColor: 'rgba(255, 255, 255, 0.015)' }}
               >
-                <span style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.7)' }}>Custom playlists</span>
+                <span style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.7)', whiteSpace: 'nowrap' }}>Custom playlists + DJ mixes</span>
               </div>
               <div 
                 className="border border-white/8 rounded-sm px-5 py-4 transition-all duration-200 ease-out hover:border-white/20 hover:bg-white/[0.03]"
