@@ -290,9 +290,9 @@ const ServicesPage = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section style={{ paddingTop: '40px', paddingBottom: '120px' }}>
+      <section style={{ paddingTop: '30px', paddingBottom: '120px' }}>
         <div className="mx-auto px-6" style={{ maxWidth: '1140px' }}>
-          <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '80px' }}>
+          <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '60px' }}>
             <div className="text-center">
               <h2 
                 className="text-white font-medium"
