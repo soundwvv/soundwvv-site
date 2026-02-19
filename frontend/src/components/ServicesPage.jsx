@@ -12,27 +12,26 @@ const ServicesPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section style={{ paddingTop: '120px', paddingBottom: '80px' }}>
+      <section style={{ paddingTop: '120px', paddingBottom: '72px' }}>
         <div className="mx-auto px-6" style={{ maxWidth: '1140px' }}>
           <h1 
             className="text-white font-medium"
             style={{ 
-              fontSize: '44px', 
-              lineHeight: '1.1',
-              letterSpacing: '-0.02em',
-              marginBottom: '20px',
-              whiteSpace: 'nowrap'
+              fontSize: '36px', 
+              lineHeight: '1.15',
+              letterSpacing: '-0.015em',
+              marginBottom: '18px'
             }}
           >
             SOUNDWVV Partnerships
           </h1>
           <p 
             style={{ 
-              fontSize: '18px', 
-              lineHeight: '1.5',
+              fontSize: '17px', 
+              lineHeight: '1.55',
               color: 'rgba(255, 255, 255, 0.7)',
               fontWeight: '400',
-              maxWidth: '480px'
+              maxWidth: '520px'
             }}
           >
             Three structured tiers designed to support and manage your brand's sound.
