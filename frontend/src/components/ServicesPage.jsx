@@ -265,7 +265,7 @@ const ServicesPage = () => {
                 />
                 <h3 className="text-white font-medium" style={{ fontSize: '18px' }}>Implementation</h3>
               </div>
-              <p style={{ fontSize: '15px', lineHeight: '1.6', color: 'rgba(255, 255, 255, 0.6)', paddingLeft: '34px' }}>
+              <p style={{ fontSize: '15px', lineHeight: '1.6', color: 'rgba(255, 255, 255, 0.6)', paddingLeft: '34px', maxWidth: '540px' }}>
                 Playlists and mixes are built and deployed in alignment with your schedule and environment.
               </p>
             </div>
