@@ -79,9 +79,14 @@ const Navbar = () => {
             <button onClick={handleContactClick} className="nav-link">
               Contact
             </button>
-            <button onClick={handleContactClick} className="cta-button">
+            <a 
+              href="https://tally.so/r/rj6245" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="cta-button"
+            >
               Start Consultation
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -107,9 +112,14 @@ const Navbar = () => {
               <button onClick={handleContactClick} className="nav-link text-left">
                 Contact
               </button>
-              <button onClick={handleContactClick} className="cta-button w-full">
+              <a 
+                href="https://tally.so/r/rj6245" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="cta-button w-full text-center"
+              >
                 Start Consultation
-              </button>
+              </a>
             </div>
           </div>
         )}

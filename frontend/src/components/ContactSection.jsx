@@ -49,12 +49,13 @@ const ContactSection = () => {
           {/* Left: Contact Info */}
           <div>
             <div className="mb-8">
-              <span className="text-white/60 text-sm uppercase tracking-widest mb-4 block">Let's Connect</span>
               <h2 className="section-heading text-white mb-6">
-                Start Your Sound Consultation
+                Let's Connect
               </h2>
               <p className="body-large text-mid-grey leading-relaxed">
-                Share a few details. We'll take it from there.
+                Share a few details about your space.
+                <br />
+                We'll take it from there.
               </p>
             </div>
 
@@ -148,22 +149,23 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label htmlFor="serviceType" className="block text-white text-sm font-medium mb-2">
-                  Service Type
+                <label htmlFor="spaceType" className="block text-white text-sm font-medium mb-2">
+                  Space Type
                 </label>
                 <select
-                  id="serviceType"
-                  name="eventType"
-                  value={formData.eventType}
+                  id="spaceType"
+                  name="spaceType"
+                  value={formData.spaceType || ''}
                   onChange={handleChange}
                   className="w-full bg-dark-grey/20 border border-white/20 text-white rounded-md px-3 py-2 focus:border-mid-purple focus:outline-none focus:ring-1 focus:ring-mid-purple"
                 >
-                  <option value="">Select service</option>
-                  <option value="core">CORE</option>
-                  <option value="flow">FLOW</option>
-                  <option value="wave">WAVE</option>
-                  <option value="on-demand">On-Demand Sound</option>
-                  <option value="not-sure">Not sure yet</option>
+                  <option value="">Select space type</option>
+                  <option value="hotel">Hotel / Resort</option>
+                  <option value="restaurant">Restaurant / Bar</option>
+                  <option value="retail">Retail</option>
+                  <option value="fitness">Fitness / Wellness</option>
+                  <option value="event">Event / Activation</option>
+                  <option value="other">Other</option>
                 </select>
               </div>
 
@@ -194,7 +196,7 @@ const ContactSection = () => {
                   </>
                 ) : (
                   <>
-                    <span>Send Consultation Request</span>
+                    <span>Send Message</span>
                     <Send size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </>
                 )}

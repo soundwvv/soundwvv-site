@@ -1,12 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const AboutSection = () => {
-  const scrollToAbout = () => {
-    const element = document.getElementById('about');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const navigate = useNavigate();
+
+  const handleAboutClick = () => {
+    navigate('/about');
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -23,10 +24,10 @@ const AboutSection = () => {
               SOUNDWVV is a DJ-led music studio curating sound for hospitality spaces, retail environments, brands, and live events. We approach music with structure and intention, guided by DJ expertise rather than automated playlists. Each music program is designed to support the rhythm and identity of a space over time.
             </p>
 
-            {/* Small CTA Link */}
+            {/* Styled CTA Button */}
             <button 
-              onClick={scrollToAbout}
-              className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm group"
+              onClick={handleAboutClick}
+              className="group inline-flex items-center gap-3 bg-white text-black px-6 py-3 rounded-full font-medium text-sm uppercase tracking-wider hover:bg-white/90 transition-all"
             >
               <span>About SOUNDWVV</span>
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />

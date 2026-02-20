@@ -36,16 +36,18 @@ const HeroSectionNew = () => {
         </h1>
 
         <p className="text-white/70 text-base md:text-lg font-light mb-12 tracking-wide">
-          DJ-led music direction
+          A DJ-led music curation studio for brands and spaces.
         </p>
 
-        <button 
-          onClick={scrollToContact}
+        <a 
+          href="https://tally.so/r/rj6245"
+          target="_blank"
+          rel="noopener noreferrer"
           className="group bg-white text-black px-8 py-4 rounded-full font-medium text-sm uppercase tracking-wider hover:bg-white/90 transition-all flex items-center gap-3"
         >
           Start a Sound Consultation
           <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-        </button>
+        </a>
       </div>
 
       {/* Scroll Indicator */}
