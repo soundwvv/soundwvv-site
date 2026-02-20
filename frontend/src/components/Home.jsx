@@ -12,11 +12,18 @@ import Footer from './Footer';
 import { Toaster } from './ui/sonner';
 
 const Home = () => {
-  const [showLoading, setShowLoading] = useState(true);
+  // Check if loading has already been shown this session
+  const hasLoadedBefore = sessionStorage.getItem('soundwvv_loaded') === 'true';
+  const [showLoading, setShowLoading] = useState(!hasLoadedBefore);
+
+  const handleLoadingComplete = () => {
+    sessionStorage.setItem('soundwvv_loaded', 'true');
+    setShowLoading(false);
+  };
 
   return (
     <div className="bg-black min-h-screen">
-      {showLoading && <LoadingScreen onLoadingComplete={() => setShowLoading(false)} />}
+      {showLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
       
       {!showLoading && (
         <>
