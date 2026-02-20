@@ -55,6 +55,15 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const handleLogoClick = (e) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  };
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-black/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
@@ -62,7 +71,7 @@ const Navbar = () => {
       <div className="max-w-[1920px] mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" onClick={handleLogoClick} className="flex items-center">
             <span className="text-2xl lg:text-3xl font-bold tracking-wider text-white hover:text-light-pink transition-colors duration-300">
               SOUNDWVV
             </span>
