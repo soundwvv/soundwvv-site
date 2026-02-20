@@ -104,10 +104,10 @@ const Navbar = () => {
               <button onClick={handleServicesClick} className="nav-link text-left">
                 Services
               </button>
-              <button onClick={() => scrollToSection('contact')} className="nav-link text-left">
+              <button onClick={handleContactClick} className="nav-link text-left">
                 Contact
               </button>
-              <button onClick={() => scrollToSection('contact')} className="cta-button w-full">
+              <button onClick={handleContactClick} className="cta-button w-full">
                 Start Consultation
               </button>
             </div>
