@@ -39,11 +39,19 @@ const Navbar = () => {
 
   const handleAboutClick = () => {
     navigate('/about');
+    window.scrollTo(0, 0);
     setIsMobileMenuOpen(false);
   };
 
   const handleServicesClick = () => {
     navigate('/services');
+    window.scrollTo(0, 0);
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleContactClick = () => {
+    navigate('/contact');
+    window.scrollTo(0, 0);
     setIsMobileMenuOpen(false);
   };
 
