@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 
 const LoadingScreen = ({ onLoadingComplete }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [videoError, setVideoError] = useState(false);
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -16,25 +17,41 @@ const LoadingScreen = ({ onLoadingComplete }) => {
     return () => clearTimeout(timer);
   }, [onLoadingComplete]);
 
+  // Handle video error - skip loading immediately
+  const handleVideoError = () => {
+    setVideoError(true);
+    setIsLoading(false);
+    setTimeout(() => {
+      onLoadingComplete();
+    }, 300);
+  };
+
   return (
     <div
-      className={`fixed inset-0 z-50 bg-black transition-opacity duration-[450ms] ${
+      className={`fixed inset-0 z-50 bg-black transition-opacity duration-[450ms] flex items-center justify-center ${
         isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
     >
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        playsInline
-        style={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover'
-        }}
-      >
-        <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/rip6bogn_soundwvv_preloader_final2.mp4" type="video/mp4" />
-      </video>
+      {!videoError ? (
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          playsInline
+          onError={handleVideoError}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        >
+          <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/rip6bogn_soundwvv_preloader_final2.mp4" type="video/mp4" />
+        </video>
+      ) : (
+        <span className="text-white text-3xl font-bold tracking-wider animate-pulse">
+          SOUNDWVV
+        </span>
+      )}
     </div>
   );
 };
