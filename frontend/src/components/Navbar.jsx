@@ -76,10 +76,10 @@ const Navbar = () => {
             <button onClick={handleServicesClick} className="nav-link">
               Services
             </button>
-            <button onClick={() => scrollToSection('contact')} className="nav-link">
+            <button onClick={handleContactClick} className="nav-link">
               Contact
             </button>
-            <button onClick={() => scrollToSection('contact')} className="cta-button">
+            <button onClick={handleContactClick} className="cta-button">
               Start Consultation
             </button>
           </div>
