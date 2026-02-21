@@ -185,17 +185,15 @@ const AboutPage = () => {
               Let's design how your brand sounds.
             </p>
             
-            <button 
-              onClick={() => {
-                navigate('/services');
-                window.scrollTo(0, 0);
-              }}
+            <Link 
+              to="/services"
+              onClick={() => window.scrollTo(0, 0)}
               data-testid="explore-services-btn"
               className="group bg-white text-black px-5 py-2 rounded-full font-medium text-[12px] uppercase tracking-wider hover:bg-white/90 transition-all inline-flex items-center gap-2"
             >
               Explore Services
               <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Link>
           </div>
 
         </div>
