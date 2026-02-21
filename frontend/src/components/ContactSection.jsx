@@ -158,7 +158,7 @@ const ContactSection = () => {
                   className="w-full bg-[#1a1a1a] border border-white/20 text-white rounded-md px-3 py-2 focus:border-mid-purple focus:outline-none focus:ring-1 focus:ring-mid-purple"
                   style={{ backgroundColor: '#1a1a1a' }}
                 >
-                  <option value="" style={{ backgroundColor: '#1a1a1a' }}>Select space type</option>
+                  <option value="" style={{ backgroundColor: '#1a1a1a' }}>Select</option>
                   <option value="restaurant" style={{ backgroundColor: '#1a1a1a' }}>Restaurant</option>
                   <option value="hotel" style={{ backgroundColor: '#1a1a1a' }}>Hotel</option>
                   <option value="retail" style={{ backgroundColor: '#1a1a1a' }}>Retail</option>

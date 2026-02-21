@@ -6,8 +6,8 @@ const AboutSection = () => {
   const navigate = useNavigate();
 
   const handleAboutClick = () => {
-    navigate('/about');
     window.scrollTo(0, 0);
+    navigate('/about');
   };
 
   return (
