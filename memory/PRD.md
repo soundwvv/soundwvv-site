@@ -45,6 +45,21 @@ Build a website for "SOUNDWVV," a DJ-led studio focused on music direction and p
 
 ## Completed Features
 
+### Feb 21, 2026 - Bug Fixes & Link Updates
+- **ContactSection.jsx:**
+  - Fixed input field styling - text now visible when typing (dark background, white text)
+  - Fixed dropdown selected value visibility
+  - Consistent styling between default, active, and focus states
+- **ServicesSectionNew.jsx:**
+  - "View Services" button now scrolls to top of Services page
+- **AboutSection.jsx:**
+  - "About SOUNDWVV" button loads About page at top
+- **AboutPage.jsx:**
+  - "Explore Services" button now links to Services page (was homepage)
+- **ServicesPage.jsx:**
+  - "Start Consultation" CTA now links to Tally form (https://tally.so/r/rj6245)
+  - Removed subline text from CTA section (headline only)
+
 ### Feb 20, 2026 - Homepage & Navigation Updates
 - **Navbar.jsx:** 
   - "Start Consultation" button links to Tally form (https://tally.so/r/rj6245)
