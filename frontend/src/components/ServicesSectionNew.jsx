@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { ChevronRight, ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const ServicesSectionNew = () => {
   const [activeService, setActiveService] = useState('CORE');
-  const navigate = useNavigate();
 
   const services = {
     CORE: {
@@ -82,16 +81,14 @@ const ServicesSectionNew = () => {
 
           {/* CTA Button */}
           <div className="mt-12">
-            <button 
-              onClick={() => {
-                window.scrollTo(0, 0);
-                navigate('/services');
-              }}
+            <Link 
+              to="/services"
+              onClick={() => window.scrollTo(0, 0)}
               className="group bg-white text-black px-8 py-4 rounded-full font-medium text-sm uppercase tracking-wider hover:bg-white/90 transition-all flex items-center gap-3"
             >
               View Services
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Link>
           </div>
         </div>
 

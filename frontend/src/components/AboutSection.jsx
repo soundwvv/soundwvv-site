@@ -1,15 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const AboutSection = () => {
-  const navigate = useNavigate();
-
-  const handleAboutClick = () => {
-    window.scrollTo(0, 0);
-    navigate('/about');
-  };
-
   return (
     <section id="about" className="section-padding bg-black">
       <div className="max-w-[1920px] mx-auto px-6 lg:px-8">
@@ -25,13 +18,14 @@ const AboutSection = () => {
             </p>
 
             {/* Styled CTA Button */}
-            <button 
-              onClick={handleAboutClick}
+            <Link 
+              to="/about"
+              onClick={() => window.scrollTo(0, 0)}
               className="group inline-flex items-center gap-3 bg-white text-black px-6 py-3 rounded-full font-medium text-sm uppercase tracking-wider hover:bg-white/90 transition-all"
             >
               <span>About SOUNDWVV</span>
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Link>
           </div>
 
           {/* Right: DJ Silhouette Image */}
