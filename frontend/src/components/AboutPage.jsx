@@ -14,7 +14,7 @@ const AboutPage = () => {
       <Navbar />
       
       {/* Pure editorial single column manifesto */}
-      <article className="bg-black" style={{ paddingTop: '140px', paddingBottom: '100px' }}>
+      <article className="bg-black" style={{ paddingTop: '100px', paddingBottom: '100px' }}>
         <div className="mx-auto px-6" style={{ maxWidth: '660px' }}>
           
           {/* Hero Headline - 36px, fits cleanly on 2 lines */}

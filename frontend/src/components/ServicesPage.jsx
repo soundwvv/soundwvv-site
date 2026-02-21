@@ -14,7 +14,7 @@ const ServicesPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section style={{ paddingTop: '120px', paddingBottom: '72px' }}>
+      <section style={{ paddingTop: '100px', paddingBottom: '72px' }}>
         <div className="mx-auto px-6" style={{ maxWidth: '1140px' }}>
           <h1 
             className="text-white font-medium"
