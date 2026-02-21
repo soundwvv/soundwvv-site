@@ -184,7 +184,10 @@ const AboutPage = () => {
             </p>
             
             <button 
-              onClick={() => navigate('/')}
+              onClick={() => {
+                navigate('/services');
+                window.scrollTo(0, 0);
+              }}
               data-testid="explore-services-btn"
               className="group bg-white text-black px-5 py-2 rounded-full font-medium text-[12px] uppercase tracking-wider hover:bg-white/90 transition-all inline-flex items-center gap-2"
             >

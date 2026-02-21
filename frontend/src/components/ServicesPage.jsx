@@ -295,21 +295,20 @@ const ServicesPage = () => {
             <div className="text-center">
               <h2 
                 className="text-white font-medium"
-                style={{ fontSize: '28px', lineHeight: '1.3', marginBottom: '16px' }}
+                style={{ fontSize: '28px', lineHeight: '1.3', marginBottom: '32px' }}
               >
                 Let's define your sound.
               </h2>
-              <p style={{ fontSize: '16px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '32px' }}>
-                Select a partnership or schedule a consultation to begin.
-              </p>
-              <button 
-                onClick={() => navigate('/')}
+              <a 
+                href="https://tally.so/r/rj6245"
+                target="_blank"
+                rel="noopener noreferrer"
                 data-testid="start-consultation-btn"
                 className="group bg-white text-black px-6 py-2.5 rounded-full font-medium text-[13px] uppercase tracking-wider hover:bg-white/90 transition-all inline-flex items-center gap-2"
               >
                 Start Consultation
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
             </div>
           </div>
         </div>

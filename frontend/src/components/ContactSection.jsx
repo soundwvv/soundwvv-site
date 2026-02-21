@@ -109,7 +109,7 @@ const ContactSection = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="bg-dark-grey/20 border-white/20 text-white focus:border-mid-purple"
+                    className="bg-[#1a1a1a] border-white/20 text-white placeholder:text-white/40 focus:border-mid-purple focus:bg-[#1a1a1a]"
                     placeholder="John Doe"
                   />
                 </div>
@@ -125,7 +125,7 @@ const ContactSection = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="bg-dark-grey/20 border-white/20 text-white focus:border-mid-purple"
+                    className="bg-[#1a1a1a] border-white/20 text-white placeholder:text-white/40 focus:border-mid-purple focus:bg-[#1a1a1a]"
                     placeholder="john@company.com"
                   />
                 </div>
@@ -141,7 +141,7 @@ const ContactSection = () => {
                   type="text"
                   value={formData.company}
                   onChange={handleChange}
-                  className="bg-dark-grey/20 border-white/20 text-white focus:border-mid-purple"
+                  className="bg-[#1a1a1a] border-white/20 text-white placeholder:text-white/40 focus:border-mid-purple focus:bg-[#1a1a1a]"
                   placeholder="Your Brand"
                 />
               </div>
@@ -155,14 +155,15 @@ const ContactSection = () => {
                   name="spaceType"
                   value={formData.spaceType || ''}
                   onChange={handleChange}
-                  className="w-full bg-dark-grey/20 border border-white/20 text-white rounded-md px-3 py-2 focus:border-mid-purple focus:outline-none focus:ring-1 focus:ring-mid-purple"
+                  className="w-full bg-[#1a1a1a] border border-white/20 text-white rounded-md px-3 py-2 focus:border-mid-purple focus:outline-none focus:ring-1 focus:ring-mid-purple"
+                  style={{ backgroundColor: '#1a1a1a' }}
                 >
-                  <option value="">Select space type</option>
-                  <option value="restaurant">Restaurant</option>
-                  <option value="hotel">Hotel</option>
-                  <option value="retail">Retail</option>
-                  <option value="event">Event</option>
-                  <option value="other">Other</option>
+                  <option value="" style={{ backgroundColor: '#1a1a1a' }}>Select space type</option>
+                  <option value="restaurant" style={{ backgroundColor: '#1a1a1a' }}>Restaurant</option>
+                  <option value="hotel" style={{ backgroundColor: '#1a1a1a' }}>Hotel</option>
+                  <option value="retail" style={{ backgroundColor: '#1a1a1a' }}>Retail</option>
+                  <option value="event" style={{ backgroundColor: '#1a1a1a' }}>Event</option>
+                  <option value="other" style={{ backgroundColor: '#1a1a1a' }}>Other</option>
                 </select>
               </div>
 
@@ -177,7 +178,7 @@ const ContactSection = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className="bg-dark-grey/20 border-white/20 text-white focus:border-mid-purple resize-none"
+                  className="bg-[#1a1a1a] border-white/20 text-white placeholder:text-white/40 focus:border-mid-purple focus:bg-[#1a1a1a] resize-none"
                   placeholder="Describe your space, brand, or event..."
                 />
               </div>
