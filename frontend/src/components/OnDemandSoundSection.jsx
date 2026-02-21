@@ -18,7 +18,7 @@ const OnDemandSoundSection = () => {
               On-Demand Sound
             </h2>
             <p className="text-white/60 text-lg font-light leading-relaxed">
-              A la carte services for brands and spaces seeking one-off support — from live DJ sets to custom playlists, music consulting, and event partnerships.
+              A la carte services ideal for one-time activations and custom builds.
             </p>
           </div>
 

@@ -53,9 +53,7 @@ const ContactSection = () => {
                 Let's Connect
               </h2>
               <p className="body-large text-mid-grey leading-relaxed">
-                Share a few details about your space.
-                <br />
-                We'll take it from there.
+                Have a question or quick inquiry? We'll take it from there.
               </p>
             </div>
 
@@ -160,11 +158,10 @@ const ContactSection = () => {
                   className="w-full bg-dark-grey/20 border border-white/20 text-white rounded-md px-3 py-2 focus:border-mid-purple focus:outline-none focus:ring-1 focus:ring-mid-purple"
                 >
                   <option value="">Select space type</option>
-                  <option value="hotel">Hotel / Resort</option>
-                  <option value="restaurant">Restaurant / Bar</option>
+                  <option value="restaurant">Restaurant</option>
+                  <option value="hotel">Hotel</option>
                   <option value="retail">Retail</option>
-                  <option value="fitness">Fitness / Wellness</option>
-                  <option value="event">Event / Activation</option>
+                  <option value="event">Event</option>
                   <option value="other">Other</option>
                 </select>
               </div>
