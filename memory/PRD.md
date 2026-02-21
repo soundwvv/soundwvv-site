@@ -53,15 +53,15 @@ Build a website for "SOUNDWVV," a DJ-led studio focused on music direction and p
   - Hero description changed to "A DJ-led music curation studio for brands and spaces."
   - CTA button links to Tally form
 - **ContactSection.jsx:**
-  - Headline changed to "Let's Connect"
-  - Two-line subline: "Share a few details about your space. / We'll take it from there."
-  - Button text changed to "Send Message"
-  - "Service Type" dropdown replaced with "Space Type" dropdown (Hotel/Resort, Restaurant/Bar, Retail, Fitness/Wellness, Event/Activation, Other)
+  - Headline: "Let's Connect"
+  - Subline: "Have a question or quick inquiry? We'll take it from there."
+  - Button text: "Send Message"
+  - "Space Type" dropdown standardized to: Restaurant, Hotel, Retail, Event, Other
 - **AboutSection.jsx:**
   - Plain text link converted to styled white CTA button linking to /about
 - **OnDemandSoundSection.jsx:**
-  - Reformatted to two-column layout (title/description left, services right)
-  - Updated copy and vertical service list with bullet points
+  - Two-column layout (title/description left, services right)
+  - Subline: "A la carte services ideal for one-time activations and custom builds."
 - **Home.jsx:**
   - Added sessionStorage tracking to prevent loading screen on logo click/return visits
 - **LoadingScreen.jsx:**
