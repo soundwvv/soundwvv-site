@@ -11,7 +11,12 @@ function ScrollToTop() {
   const { pathname } = useLocation();
   
   useLayoutEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    // Disable browser's automatic scroll restoration
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    // Force instant scroll to top, overriding CSS smooth behavior
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, [pathname]);
   
   return null;
