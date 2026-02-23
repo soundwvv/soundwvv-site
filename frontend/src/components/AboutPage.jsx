@@ -10,7 +10,7 @@ const AboutPage = () => {
       <Navbar />
       
       {/* Pure editorial single column manifesto */}
-      <article className="bg-black" style={{ paddingTop: '100px', paddingBottom: '100px' }}>
+      <article className="bg-black" style={{ paddingTop: '120px', paddingBottom: '60px' }}>
         <div className="mx-auto px-6" style={{ maxWidth: '660px' }}>
           
           {/* Hero Headline - 36px, fits cleanly on 2 lines */}
@@ -157,42 +157,39 @@ const AboutPage = () => {
             From intimate venues to international stages, the focus has remained the same — music designed to serve the space, the brand, and the people inside it.
           </p>
 
-          {/* Subtle 1px divider */}
-          <div 
-            style={{ 
-              height: '1px', 
-              backgroundColor: 'rgba(255, 255, 255, 0.1)',
-              marginTop: '72px',
-              marginBottom: '72px'
-            }}
-          />
-
-          {/* CTA Section - Centered, restrained */}
-          <div className="text-center">
-            {/* CTA Headline - 24px, restrained */}
-            <p 
-              className="text-white font-medium"
-              style={{ 
-                fontSize: '24px', 
-                lineHeight: '1.3',
-                marginBottom: '28px'
-              }}
-            >
-              Let's design how your brand sounds.
-            </p>
-            
-            <Link 
-              to="/services"
-              data-testid="explore-services-btn"
-              className="group bg-white text-black px-5 py-2 rounded-full font-medium text-[12px] uppercase tracking-wider hover:bg-white/90 transition-all inline-flex items-center gap-2"
-            >
-              Explore Services
-              <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-
+          {/* Divider - matching Services page container width */}
         </div>
       </article>
+
+      {/* CTA Section - matching Services page structure */}
+      <section style={{ paddingTop: '30px', paddingBottom: '100px' }}>
+        <div className="mx-auto px-6" style={{ maxWidth: '1140px' }}>
+          <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '60px' }}>
+            <div className="text-center">
+              {/* CTA Headline - 24px, restrained */}
+              <p 
+                className="text-white font-medium"
+                style={{ 
+                  fontSize: '24px', 
+                  lineHeight: '1.3',
+                  marginBottom: '28px'
+                }}
+              >
+                Let's design how your brand sounds.
+              </p>
+              
+              <Link 
+                to="/services"
+                data-testid="explore-services-btn"
+                className="group bg-white text-black px-5 py-2 rounded-full font-medium text-[12px] uppercase tracking-wider hover:bg-white/90 transition-all inline-flex items-center gap-2"
+              >
+                Explore Services
+                <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
