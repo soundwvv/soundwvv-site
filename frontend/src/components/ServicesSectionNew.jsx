@@ -83,7 +83,6 @@ const ServicesSectionNew = () => {
           <div className="mt-12">
             <Link 
               to="/services"
-              onClick={() => window.scrollTo(0, 0)}
               className="group bg-white text-black px-8 py-4 rounded-full font-medium text-sm uppercase tracking-wider hover:bg-white/90 transition-all inline-flex items-center gap-3 w-auto"
             >
               View Services

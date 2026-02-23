@@ -20,7 +20,6 @@ const AboutSection = () => {
             {/* Styled CTA Button */}
             <Link 
               to="/about"
-              onClick={() => window.scrollTo(0, 0)}
               className="group inline-flex items-center gap-3 bg-white text-black px-6 py-3 rounded-full font-medium text-sm uppercase tracking-wider hover:bg-white/90 transition-all"
             >
               <span>About SOUNDWVV</span>
