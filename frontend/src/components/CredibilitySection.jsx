@@ -177,7 +177,13 @@ const CredibilitySection = () => {
               <img
                 src={client.logo}
                 alt={client.name}
-                className="w-full h-full object-contain"
+                className="object-contain"
+                style={{ 
+                  width: `${(client.scale || 0.8) * 100}%`, 
+                  height: `${(client.scale || 0.8) * 100}%`,
+                  maxWidth: '100%',
+                  maxHeight: '100%'
+                }}
               />
             </div>
           ))}
