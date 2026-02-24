@@ -69,14 +69,21 @@ const CredibilitySection = () => {
   }, [hasAnimated]);
 
   const clients = [
+    // Row 1: Terranea, Proper, Loews, Hilltop
     { id: 1, name: "Terranea Resort", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/9p5ez5jb_terranea%20resort.png" },
-    { id: 2, name: "NBA Players Association", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/aiuc64g8_nbaplayersassociation.png" },
-    { id: 3, name: "Hilltop Coffee & Kitchen", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/ga7v94ag_hilltopcoffeekitchen.png" },
-    { id: 4, name: "Proper Hotel", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/erlsu3da_properhotelsm.png" },
-    { id: 5, name: "E.P. & L.P.", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/i8w4fspy_eplp.png" },
-    { id: 6, name: "Meta", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/cn10147u_meta.png" },
-    { id: 7, name: "Loews Hotels", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/inuqzlh0_loews.png" },
-    { id: 8, name: "Playboy", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/itvpzrj1_playboy.png" }
+    { id: 2, name: "Proper Hotel", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/erlsu3da_properhotelsm.png" },
+    { id: 3, name: "Loews Hotels", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/inuqzlh0_loews.png" },
+    { id: 4, name: "Hilltop Coffee & Kitchen", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/ga7v94ag_hilltopcoffeekitchen.png" },
+    // Row 2: Meta, NBPA, SoFi Stadium, Playboy
+    { id: 5, name: "Meta", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/cn10147u_meta.png" },
+    { id: 6, name: "NBA Players Association", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/aiuc64g8_nbaplayersassociation.png" },
+    { id: 7, name: "SoFi Stadium", logo: "https://customer-assets.emergentagent.com/job_08084b79-3026-4c9f-ad4a-3acbeed39eb1/artifacts/k537y71w_sofistadium.png" },
+    { id: 8, name: "Playboy", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/itvpzrj1_playboy.png" },
+    // Row 3: Porsche, Tequila Patrón, Adidas, E.P. & L.P.
+    { id: 9, name: "Porsche", logo: "https://customer-assets.emergentagent.com/job_08084b79-3026-4c9f-ad4a-3acbeed39eb1/artifacts/u780jndo_porschelogomark.png" },
+    { id: 10, name: "Tequila Patrón", logo: "https://customer-assets.emergentagent.com/job_08084b79-3026-4c9f-ad4a-3acbeed39eb1/artifacts/xgypdhw4_Patron_Tequila_Logo.png" },
+    { id: 11, name: "Adidas", logo: "https://customer-assets.emergentagent.com/job_08084b79-3026-4c9f-ad4a-3acbeed39eb1/artifacts/jm8plkrg_Adidas_Logo.svg.png" },
+    { id: 12, name: "E.P. & L.P.", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/i8w4fspy_eplp.png" }
   ];
 
   return (
