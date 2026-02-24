@@ -81,8 +81,8 @@ const CredibilitySection = () => {
     { id: 8, name: "Playboy", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/itvpzrj1_playboy.png", scale: 0.65 },
     // Row 3: Porsche, Tequila Patrón, Adidas, E.P. & L.P.
     { id: 9, name: "Porsche", logo: "https://customer-assets.emergentagent.com/job_08084b79-3026-4c9f-ad4a-3acbeed39eb1/artifacts/03c2dk7b_porschelogo%202.png", scale: 0.75 },
-    { id: 10, name: "Tequila Patrón", logo: "https://customer-assets.emergentagent.com/job_08084b79-3026-4c9f-ad4a-3acbeed39eb1/artifacts/xgypdhw4_Patron_Tequila_Logo.png", scale: 0.85 },
-    { id: 11, name: "Adidas", logo: "https://customer-assets.emergentagent.com/job_08084b79-3026-4c9f-ad4a-3acbeed39eb1/artifacts/jm8plkrg_Adidas_Logo.svg.png", scale: 0.65 },
+    { id: 10, name: "Tequila Patrón", logo: "https://customer-assets.emergentagent.com/job_08084b79-3026-4c9f-ad4a-3acbeed39eb1/artifacts/xgypdhw4_Patron_Tequila_Logo.png", scale: 0.9 },
+    { id: 11, name: "Adidas", logo: "https://customer-assets.emergentagent.com/job_08084b79-3026-4c9f-ad4a-3acbeed39eb1/artifacts/jm8plkrg_Adidas_Logo.svg.png", scale: 0.55 },
     { id: 12, name: "E.P. & L.P.", logo: "https://customer-assets.emergentagent.com/job_beat-space/artifacts/i8w4fspy_eplp.png", scale: 0.8 }
   ];
 

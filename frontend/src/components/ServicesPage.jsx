@@ -10,7 +10,7 @@ const ServicesPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section style={{ paddingTop: '120px', paddingBottom: '72px' }}>
+      <section style={{ paddingTop: '140px', paddingBottom: '72px' }}>
         <div className="mx-auto px-6" style={{ maxWidth: '1140px' }}>
           <h1 
             className="text-white font-medium"
@@ -21,7 +21,7 @@ const ServicesPage = () => {
               marginBottom: '18px'
             }}
           >
-            SOUNDWVV Partnerships
+            Partnerships
           </h1>
           <p 
             style={{ 
@@ -287,9 +287,9 @@ const ServicesPage = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section style={{ paddingTop: '30px', paddingBottom: '100px' }}>
+      <section style={{ paddingTop: '40px', paddingBottom: '100px' }}>
         <div className="mx-auto px-6" style={{ maxWidth: '1140px' }}>
-          <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '60px' }}>
+          <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '72px', paddingBottom: '12px' }}>
             <div className="text-center">
               <h2 
                 className="text-white font-medium"
