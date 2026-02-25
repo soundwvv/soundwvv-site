@@ -23,6 +23,16 @@ mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
+# Resend configuration
+resend.api_key = os.environ.get('RESEND_API_KEY')
+SENDER_EMAIL = os.environ.get('SENDER_EMAIL', 'onboarding@resend.dev')
+CONTACT_EMAIL = 'contact@soundwvv.com'
+
+# Rate limiting storage (in-memory for simplicity)
+rate_limit_store = defaultdict(list)
+RATE_LIMIT_WINDOW = 3600  # 1 hour in seconds
+RATE_LIMIT_MAX_REQUESTS = 5  # Max 5 submissions per hour per IP
+
 # Create the main app without a prefix
 app = FastAPI()
 
