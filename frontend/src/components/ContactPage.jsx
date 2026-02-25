@@ -3,6 +3,8 @@ import { ArrowRight, Check } from 'lucide-react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
+const API_URL = process.env.REACT_APP_BACKEND_URL;
+
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     fullName: '',
@@ -11,10 +13,12 @@ const ContactPage = () => {
     spaceType: '',
     city: '',
     timeline: '',
-    message: ''
+    message: '',
+    website: '' // Honeypot field
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,9 +28,42 @@ const ContactPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 800));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    setError('');
+    
+    try {
+      // Map form fields to API expected format
+      const payload = {
+        name: formData.fullName,
+        email: formData.email,
+        company: formData.companyName,
+        spaceType: formData.spaceType,
+        message: `${formData.message}${formData.city ? `\n\nLocation: ${formData.city}` : ''}${formData.timeline ? `\nTimeline: ${formData.timeline}` : ''}`,
+        website: formData.website // Honeypot
+      };
+      
+      const response = await fetch(`${API_URL}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok && data.success) {
+        setIsSubmitted(true);
+      } else if (response.status === 429) {
+        setError('Too many requests. Please wait before trying again.');
+      } else {
+        throw new Error(data.detail || 'Failed to send message');
+      }
+    } catch (err) {
+      console.error('Contact form error:', err);
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputStyles = {
