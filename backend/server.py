@@ -51,6 +51,21 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+# Contact form model
+class ContactFormSubmission(BaseModel):
+    name: str = Field(..., min_length=1, max_length=100)
+    email: EmailStr
+    company: Optional[str] = Field(default="", max_length=100)
+    spaceType: Optional[str] = Field(default="", max_length=50)
+    message: str = Field(..., min_length=10, max_length=5000)
+    # Honeypot field - should always be empty
+    website: Optional[str] = Field(default="")
+
+class ContactFormResponse(BaseModel):
+    success: bool
+    message: str
+    submission_id: Optional[str] = None
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
