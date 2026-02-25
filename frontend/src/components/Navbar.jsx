@@ -72,9 +72,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" onClick={handleLogoClick} className="flex items-center">
-            <span className="text-2xl lg:text-3xl font-bold tracking-wider text-white hover:text-light-pink transition-colors duration-300">
-              SOUNDWVV
-            </span>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_08084b79-3026-4c9f-ad4a-3acbeed39eb1/artifacts/q1qbn29n_SOUNDWAV_V5B.png" 
+              alt="SOUNDWVV"
+              className="h-4 lg:h-[18px] w-auto object-contain hover:opacity-80 transition-opacity duration-300"
+            />
           </Link>
 
           {/* Desktop Navigation */}
