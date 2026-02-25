@@ -7,37 +7,37 @@ Build a website for "SOUNDWVV," a DJ-led studio focused on music direction and p
 - Standalone Services page
 - Standalone Contact page
 - Functional preloader/loading screen
-- Contact form (backend pending)
+- Contact form backend integration
 - Design: minimal, premium, black/charcoal palette with subtle animations
 
 ## Tech Stack
 - **Frontend:** React, Tailwind CSS, Framer Motion, react-router-dom, lucide-react
-- **Backend:** FastAPI (boilerplate)
-- **Database:** MongoDB (unused)
+- **Backend:** FastAPI with Resend email integration
+- **Database:** MongoDB
 
 ## Architecture
 ```
 /app
 ├── backend/
-│   └── server.py
+│   └── server.py (FastAPI with /api/contact endpoint)
 └── frontend/
     ├── src/
     │   ├── components/
     │   │   ├── AboutPage.jsx ✅ FINALIZED
-    │   │   ├── AboutSection.jsx ✅ Updated - styled CTA button
+    │   │   ├── AboutSection.jsx ✅ Updated
     │   │   ├── BridgeSection.jsx
-    │   │   ├── ContactPage.jsx ✅ FINALIZED
-    │   │   ├── ContactSection.jsx ✅ Updated - "Let's Connect", Space Type dropdown
-    │   │   ├── CredibilitySection.jsx
+    │   │   ├── ContactPage.jsx ✅ API Integration
+    │   │   ├── ContactSection.jsx ✅ API Integration
+    │   │   ├── CredibilitySection.jsx ✅ 12 logos, scaled
     │   │   ├── Footer.jsx
-    │   │   ├── HeroSectionNew.jsx ✅ Updated - new tagline, Tally link
-    │   │   ├── Home.jsx ✅ Updated - sessionStorage for loading
-    │   │   ├── LoadingScreen.jsx ✅ Updated - error fallback
-    │   │   ├── Navbar.jsx ✅ Updated - Tally link, logo click fix
-    │   │   ├── OnDemandSoundSection.jsx ✅ Updated - two-column layout
+    │   │   ├── HeroSectionNew.jsx ✅ Tally link
+    │   │   ├── Home.jsx ✅ sessionStorage loading
+    │   │   ├── LoadingScreen.jsx ✅ Error fallback
+    │   │   ├── Navbar.jsx ✅ Tally link
+    │   │   ├── OnDemandSoundSection.jsx ✅ Two-column
     │   │   ├── ServicesPage.jsx ✅ FINALIZED
     │   │   └── ServicesSectionNew.jsx
-    │   ├── App.js
+    │   ├── App.js ✅ ScrollToTop component
     │   └── index.css
     ├── package.json
     └── tailwind.config.js
@@ -45,68 +45,112 @@ Build a website for "SOUNDWVV," a DJ-led studio focused on music direction and p
 
 ## Completed Features
 
-### Feb 21, 2026 - Bug Fixes & Link Updates
-- **ContactSection.jsx:**
-  - Fixed input field styling - text now visible when typing (dark background, white text)
-  - Fixed dropdown selected value visibility
-  - Consistent styling between default, active, and focus states
-- **ServicesSectionNew.jsx:**
-  - "View Services" button now scrolls to top of Services page
-- **AboutSection.jsx:**
-  - "About SOUNDWVV" button loads About page at top
-- **AboutPage.jsx:**
-  - "Explore Services" button now links to Services page (was homepage)
-- **ServicesPage.jsx:**
-  - "Start Consultation" CTA now links to Tally form (https://tally.so/r/rj6245)
-  - Removed subline text from CTA section (headline only)
+### Feb 25, 2026 - Backend Contact Form Integration
+- **server.py:**
+  - Created `/api/contact` POST endpoint
+  - Resend email integration (sends to contact@soundwvv.com)
+  - HTML and plain text email formatting
+  - Reply-to set to submitter's email
+  - Honeypot spam protection
+  - Rate limiting (5 requests/hour per IP)
+  - MongoDB storage of all submissions
+  - Proper error handling
+- **ContactSection.jsx & ContactPage.jsx:**
+  - Both forms submit to `/api/contact`
+  - Hidden honeypot field
+  - Error handling with user feedback
+  - Success/error toasts
 
-### Feb 20, 2026 - Homepage & Navigation Updates
-- **Navbar.jsx:** 
-  - "Start Consultation" button links to Tally form (https://tally.so/r/rj6245)
-  - Logo click on homepage scrolls to top without re-triggering loading
-- **HeroSectionNew.jsx:**
-  - Hero description changed to "A DJ-led music curation studio for brands and spaces."
-  - CTA button links to Tally form
-- **ContactSection.jsx:**
-  - Headline: "Let's Connect"
-  - Subline: "Have a question or quick inquiry? We'll take it from there."
-  - Button text: "Send Message"
-  - "Space Type" dropdown standardized to: Restaurant, Hotel, Retail, Event, Other
-- **AboutSection.jsx:**
-  - Plain text link converted to styled white CTA button linking to /about
-- **OnDemandSoundSection.jsx:**
-  - Two-column layout (title/description left, services right)
-  - Subline: "A la carte services ideal for one-time activations and custom builds."
-- **Home.jsx:**
-  - Added sessionStorage tracking to prevent loading screen on logo click/return visits
-- **LoadingScreen.jsx:**
-  - Added video error handling with graceful fallback
+### Feb 24, 2026 - Brand Partner Grid & Refinements
+- Added 4 new logos: SoFi Stadium, Porsche, Adidas, Tequila Patrón
+- Reordered to 3x4 grid with specific layout
+- Individual logo scaling for visual balance
+- Replaced NBPA and Porsche logos with new versions
+- Services page title changed to "Partnerships"
+- Increased top padding on About & Services (140px)
+- CTA section vertical balance adjustments
 
-### Feb 18-19, 2026 - Pages & Design
-- **AboutPage.jsx** - Standalone editorial manifesto page
-- **ServicesPage.jsx** - Standalone services page with tiers and pricing
-- **ContactPage.jsx** - Standalone contact page with form
+### Feb 23-24, 2026 - Scroll & Routing Fixes
+- ScrollToTop component using useLayoutEffect
+- `behavior: 'instant'` to override CSS smooth scroll
+- `scrollRestoration: 'manual'` for browser history
+- Route changes render at scroll position 0 immediately
+
+### Feb 20-21, 2026 - Homepage & Navigation Updates
+- Navbar & Hero buttons link to Tally form
+- Hero description: "A DJ-led music curation studio for brands and spaces."
+- Contact Section: "Let's Connect" headline, "Space Type" dropdown
+- On-Demand Sound: Two-column layout
+- Contact form field styling fixes
+- View Services & About buttons route correctly
 
 ### Previous Sessions
-- Multi-section landing page with mock data
-- Video preloader (LoadingScreen.jsx)
-- Scroll-triggered animations (BridgeSection.jsx)
-- Client logos and count-up stats (CredibilitySection.jsx)
+- Multi-section landing page
+- Video preloader with fallback
+- About, Services, Contact pages built
+- Global routing and navigation
+
+## API Endpoints
+
+### POST /api/contact
+**Request Body:**
+```json
+{
+  "name": "string (required)",
+  "email": "string (required, valid email)",
+  "company": "string (optional)",
+  "spaceType": "string (optional)",
+  "message": "string (required, 10-5000 chars)",
+  "website": "string (honeypot, must be empty)"
+}
+```
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Thank you for your message. We'll be in touch soon.",
+  "submission_id": "string"
+}
+```
+
+**Error Responses:**
+- 422: Validation error
+- 429: Rate limit exceeded
+
+## Database Schema
+
+### contact_submissions
+```javascript
+{
+  id: "string (8-char UUID)",
+  name: "string",
+  email: "string",
+  company: "string",
+  space_type: "string",
+  message: "string",
+  ip_address: "string",
+  timestamp: "ISO datetime",
+  email_sent: "boolean",
+  email_id: "string (optional)"
+}
+```
 
 ## Pending Issues
 | Priority | Issue | Status |
 |----------|-------|--------|
-| P1 | Track Record section video background fill (gray bands) | Testing Pending |
-| P1 | Intermittent video loading failures | Mitigated with fallback |
-| P2 | Contact form backend implementation | Not Started |
+| P1 | Track Record section video background fill (gray bands) | Pending |
+| P2 | Configure production Resend API key | Pending |
 
-## Backlog
-- Clean up unused components (ServicesSectionNew.jsx may be redundant)
-- Implement backend API for contact form submissions
-
-## Known Issues
-- Video assets from platform server intermittently fail to load (hosting-related)
-- Contact forms are frontend-only (MOCKED - no backend submission)
+## Environment Variables Required
+```
+# Backend (.env)
+MONGO_URL=mongodb://localhost:27017
+DB_NAME=test_database
+CORS_ORIGINS=*
+RESEND_API_KEY=re_xxxxx (required for email sending)
+SENDER_EMAIL=onboarding@resend.dev
+```
 
 ## User Preferences
 - Extremely detailed, prescriptive feedback style
