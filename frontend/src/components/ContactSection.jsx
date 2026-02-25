@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
-import { formFields } from '../mock';
 import { Send, Mail, Phone, MapPin } from 'lucide-react';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { useToast } from '../hooks/use-toast';
 
+const API_URL = process.env.REACT_APP_BACKEND_URL;
+
 const ContactSection = () => {
-  const [formData, setFormData] = useState(formFields);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    spaceType: '',
+    message: '',
+    website: '' // Honeypot field
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
@@ -15,18 +23,53 @@ const ContactSection = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    setTimeout(() => {
-      toast({
-        title: "Consultation Request Received!",
-        description: "We'll get back to you within 24 hours.",
+    try {
+      const response = await fetch(`${API_URL}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-      setFormData(formFields);
+      
+      const data = await response.json();
+      
+      if (response.ok && data.success) {
+        toast({
+          title: "Message Sent!",
+          description: data.message || "We'll be in touch soon.",
+        });
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          spaceType: '',
+          message: '',
+          website: ''
+        });
+      } else if (response.status === 429) {
+        toast({
+          title: "Too Many Requests",
+          description: "Please wait before submitting again.",
+          variant: "destructive"
+        });
+      } else {
+        throw new Error(data.detail || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Contact form error:', error);
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
