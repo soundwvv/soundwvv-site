@@ -140,6 +140,18 @@ const ContactSection = () => {
           {/* Right: Form */}
           <div>
             <form onSubmit={handleSubmit} className="bg-black/50 border border-white/10 rounded-lg p-8 space-y-6">
+              {/* Honeypot field - hidden from users, catches bots */}
+              <div style={{ position: 'absolute', left: '-9999px' }} aria-hidden="true">
+                <input
+                  type="text"
+                  name="website"
+                  value={formData.website}
+                  onChange={handleChange}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
+              
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-white text-sm font-medium mb-2">
