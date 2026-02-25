@@ -115,6 +115,24 @@ const ContactPage = () => {
           ) : (
             <form onSubmit={handleSubmit}>
               <div style={{ padding: '40px', backgroundColor: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px' }}>
+                {/* Honeypot field - hidden from users, catches bots */}
+                <div style={{ position: 'absolute', left: '-9999px' }} aria-hidden="true">
+                  <input
+                    type="text"
+                    name="website"
+                    value={formData.website}
+                    onChange={handleChange}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
+                
+                {error && (
+                  <div style={{ marginBottom: '24px', padding: '12px 16px', backgroundColor: 'rgba(255, 100, 100, 0.1)', border: '1px solid rgba(255, 100, 100, 0.3)', borderRadius: '4px', color: '#ff6464', fontSize: '14px' }}>
+                    {error}
+                  </div>
+                )}
+                
                 <div style={{ marginBottom: '24px' }}>
                   <label style={labelStyles}>Full Name <span style={{ color: 'rgba(255, 255, 255, 0.3)' }}>*</span></label>
                   <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required style={inputStyles} className="focus:border-white/30 focus:bg-white/[0.06]" data-testid="input-fullname" />
