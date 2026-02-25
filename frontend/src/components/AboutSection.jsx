@@ -9,11 +9,11 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Content */}
           <div className="order-2 lg:order-1">
-            <h2 className="section-heading text-white mb-8">
+            <h2 className="text-white text-4xl lg:text-5xl font-light mb-8 tracking-tight">
               About SOUNDWVV
             </h2>
             
-            <p className="body-large text-mid-grey leading-relaxed mb-6" style={{ maxWidth: '540px' }}>
+            <p className="text-white/60 text-lg font-light leading-relaxed mb-6" style={{ maxWidth: '540px' }}>
               SOUNDWVV is a DJ-led music studio curating sound for hospitality spaces, retail environments, brands, and live events. We approach music with structure and intention, guided by DJ expertise rather than automated playlists. Each music program is designed to support the rhythm and identity of a space over time.
             </p>
 

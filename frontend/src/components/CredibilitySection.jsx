@@ -163,7 +163,7 @@ const CredibilitySection = () => {
           <h2 className="text-white text-4xl lg:text-5xl font-light mb-6 tracking-tight">
             Trusted by Brand Partners
           </h2>
-          <p className="text-white/60 text-lg lg:text-xl max-w-3xl mx-auto">
+          <p className="text-white/60 text-lg font-light max-w-3xl mx-auto">
             Selected venues and global brand environments we've supported.
           </p>
         </div>

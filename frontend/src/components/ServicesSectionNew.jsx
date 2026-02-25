@@ -33,10 +33,10 @@ const ServicesSectionNew = () => {
         <div className="flex flex-col justify-between p-8 lg:p-12 xl:p-16">
           {/* Header */}
           <div className="mb-12">
-            <h2 className="text-white text-5xl lg:text-6xl xl:text-7xl font-light mb-4 tracking-tight">
+            <h2 className="text-white text-4xl lg:text-5xl font-light mb-4 tracking-tight">
               Services
             </h2>
-            <p className="text-white/60 text-lg lg:text-xl font-light">
+            <p className="text-white/60 text-lg font-light">
               Tiered sound programs tailored to the needs of each space.
             </p>
           </div>

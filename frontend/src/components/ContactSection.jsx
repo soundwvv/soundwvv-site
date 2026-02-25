@@ -92,10 +92,10 @@ const ContactSection = () => {
           {/* Left: Contact Info */}
           <div>
             <div className="mb-8">
-              <h2 className="section-heading text-white mb-6">
+              <h2 className="text-white text-4xl lg:text-5xl font-light mb-6 tracking-tight">
                 Let's Connect
               </h2>
-              <p className="body-large text-mid-grey leading-relaxed">
+              <p className="text-white/60 text-lg font-light leading-relaxed">
                 Have a question or quick inquiry? We'll take it from there.
               </p>
             </div>
