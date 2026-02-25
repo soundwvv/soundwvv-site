@@ -75,7 +75,7 @@ const Navbar = () => {
             <img 
               src="https://customer-assets.emergentagent.com/job_08084b79-3026-4c9f-ad4a-3acbeed39eb1/artifacts/q1qbn29n_SOUNDWAV_V5B.png" 
               alt="SOUNDWVV"
-              className="h-[26px] lg:h-8 w-auto object-contain hover:opacity-80 transition-opacity duration-300"
+              className="w-[110px] lg:w-[140px] h-auto object-contain"
             />
           </Link>
 
