@@ -30,12 +30,18 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
+      // Include city and timeline in the message
+      const payload = {
+        ...formData,
+        message: `${formData.message}${formData.city ? `\n\nLocation: ${formData.city}` : ''}${formData.timeline ? `\nTimeline: ${formData.timeline.replace(/-/g, ' ').replace(/(\d) (\d)/g, '$1-$2')}` : ''}`
+      };
+      
       const response = await fetch(`${API_URL}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
       
       const data = await response.json();
