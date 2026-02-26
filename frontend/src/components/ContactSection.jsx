@@ -106,7 +106,9 @@ const ContactSection = () => {
                 Let's Connect
               </h2>
               <p className="text-white/60 text-lg font-light leading-relaxed">
-                Have a question or quick inquiry? We'll take it from there.
+                Have a question or quick inquiry?
+                <br />
+                Share a few details. We'll take it from there.
               </p>
             </div>
 
