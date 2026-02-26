@@ -149,6 +149,27 @@ const ContactSection = () => {
 
           {/* Right: Form */}
           <div>
+            {/* Confirmation Banner */}
+            <div 
+              className={`mb-6 transition-all duration-500 ease-out overflow-hidden ${
+                showConfirmation 
+                  ? 'opacity-100 max-h-40' 
+                  : 'opacity-0 max-h-0'
+              }`}
+            >
+              <div className="bg-white/5 border border-white/10 rounded-lg p-6 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle size={20} className="text-white" />
+                </div>
+                <div>
+                  <h4 className="text-white font-medium text-lg mb-1">Message received.</h4>
+                  <p className="text-white/60 text-sm leading-relaxed">
+                    Thanks for reaching out. We'll review your inquiry and follow up shortly.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <form onSubmit={handleSubmit} className="bg-black/50 border border-white/10 rounded-lg p-8 space-y-6">
               {/* Honeypot field - hidden from users, catches bots */}
               <div style={{ position: 'absolute', left: '-9999px' }} aria-hidden="true">
