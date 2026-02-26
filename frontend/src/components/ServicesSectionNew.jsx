@@ -16,7 +16,7 @@ const ServicesSectionNew = () => {
       title: 'FLOW',
       subtitle: '– The Evolution',
       description: 'Ongoing curation and refinement for hospitality, retail, and event venue environments.',
-      image: 'https://customer-assets.emergentagent.com/job_beat-space/artifacts/0hktpn29_Flow2.jpg'
+      image: 'https://customer-assets.emergentagent.com/job_08084b79-3026-4c9f-ad4a-3acbeed39eb1/artifacts/f65tayrz_caferestaurant.jpg'
     },
     WAVE: {
       title: 'WAVE',
