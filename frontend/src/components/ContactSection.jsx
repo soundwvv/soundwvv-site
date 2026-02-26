@@ -12,6 +12,8 @@ const ContactSection = () => {
     email: '',
     company: '',
     spaceType: '',
+    city: '',
+    timeline: '',
     message: '',
     website: '' // Honeypot field
   });
@@ -48,6 +50,8 @@ const ContactSection = () => {
           email: '',
           company: '',
           spaceType: '',
+          city: '',
+          timeline: '',
           message: '',
           website: ''
         });
@@ -220,6 +224,43 @@ const ContactSection = () => {
                   <option value="event" style={{ backgroundColor: '#1a1a1a' }}>Event</option>
                   <option value="other" style={{ backgroundColor: '#1a1a1a' }}>Other</option>
                 </select>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="city" className="block text-white text-sm font-medium mb-2">
+                    City / Location
+                  </label>
+                  <Input
+                    id="city"
+                    name="city"
+                    type="text"
+                    value={formData.city}
+                    onChange={handleChange}
+                    className="bg-[#1a1a1a] border-white/20 text-white placeholder:text-white/40 focus:border-mid-purple focus:bg-[#1a1a1a]"
+                    placeholder="Los Angeles, CA"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="timeline" className="block text-white text-sm font-medium mb-2">
+                    Timeline
+                  </label>
+                  <select
+                    id="timeline"
+                    name="timeline"
+                    value={formData.timeline || ''}
+                    onChange={handleChange}
+                    className="w-full bg-[#1a1a1a] border border-white/20 text-white rounded-md px-3 py-2 focus:border-mid-purple focus:outline-none focus:ring-1 focus:ring-mid-purple"
+                    style={{ backgroundColor: '#1a1a1a' }}
+                  >
+                    <option value="" style={{ backgroundColor: '#1a1a1a' }}>Select</option>
+                    <option value="immediate" style={{ backgroundColor: '#1a1a1a' }}>Immediate</option>
+                    <option value="1-3-months" style={{ backgroundColor: '#1a1a1a' }}>1–3 Months</option>
+                    <option value="3-6-months" style={{ backgroundColor: '#1a1a1a' }}>3–6 Months</option>
+                    <option value="planning" style={{ backgroundColor: '#1a1a1a' }}>Planning Stage</option>
+                  </select>
+                </div>
               </div>
 
               <div>
