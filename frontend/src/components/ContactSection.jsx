@@ -48,10 +48,7 @@ const ContactSection = () => {
       const data = await response.json();
       
       if (response.ok && data.success) {
-        toast({
-          title: "Message Sent!",
-          description: data.message || "We'll be in touch soon.",
-        });
+        setShowConfirmation(true);
         setFormData({
           name: '',
           email: '',
