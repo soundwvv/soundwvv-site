@@ -164,9 +164,10 @@ const ContactPage = () => {
                   <label style={labelStyles}>Timeline</label>
                   <select name="timeline" value={formData.timeline} onChange={handleChange} style={{ ...inputStyles, cursor: 'pointer', appearance: 'none', backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.5)' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E\")", backgroundRepeat: 'no-repeat', backgroundPosition: 'right 16px center' }} className="focus:border-white/30 focus:bg-white/[0.06]" data-testid="select-timeline">
                     <option value="" style={{ backgroundColor: '#1a1a1a' }}>Select...</option>
-                    <option value="asap" style={{ backgroundColor: '#1a1a1a' }}>ASAP</option>
-                    <option value="1-3months" style={{ backgroundColor: '#1a1a1a' }}>1-3 Months</option>
-                    <option value="exploring" style={{ backgroundColor: '#1a1a1a' }}>Exploring</option>
+                    <option value="immediate" style={{ backgroundColor: '#1a1a1a' }}>Immediate</option>
+                    <option value="1-3-months" style={{ backgroundColor: '#1a1a1a' }}>1–3 Months</option>
+                    <option value="3-6-months" style={{ backgroundColor: '#1a1a1a' }}>3–6 Months</option>
+                    <option value="planning" style={{ backgroundColor: '#1a1a1a' }}>Planning Stage</option>
                   </select>
                 </div>
                 <div style={{ marginBottom: '32px' }}>
