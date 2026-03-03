@@ -158,159 +158,18 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="bg-black/50 border border-white/10 rounded-lg p-8 space-y-6">
-              {/* Honeypot field - hidden from users, catches bots */}
-              <div style={{ position: 'absolute', left: '-9999px' }} aria-hidden="true">
-                <input
-                  type="text"
-                  name="website"
-                  value={formData.website}
-                  onChange={handleChange}
-                  tabIndex={-1}
-                  autoComplete="off"
-                />
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-white text-sm font-medium mb-2">
-                    Full Name *
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="bg-[#1a1a1a] border-white/20 text-white placeholder:text-white/40 focus:border-mid-purple focus:bg-[#1a1a1a]"
-                    placeholder="John Doe"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-white text-sm font-medium mb-2">
-                    Email *
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="bg-[#1a1a1a] border-white/20 text-white placeholder:text-white/40 focus:border-mid-purple focus:bg-[#1a1a1a]"
-                    placeholder="john@company.com"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="company" className="block text-white text-sm font-medium mb-2">
-                  Company/Brand
-                </label>
-                <Input
-                  id="company"
-                  name="company"
-                  type="text"
-                  value={formData.company}
-                  onChange={handleChange}
-                  className="bg-[#1a1a1a] border-white/20 text-white placeholder:text-white/40 focus:border-mid-purple focus:bg-[#1a1a1a]"
-                  placeholder="Your Brand"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="spaceType" className="block text-white text-sm font-medium mb-2">
-                  Space Type
-                </label>
-                <select
-                  id="spaceType"
-                  name="spaceType"
-                  value={formData.spaceType || ''}
-                  onChange={handleChange}
-                  className="w-full bg-[#1a1a1a] border border-white/20 text-white rounded-md px-3 py-2 focus:border-mid-purple focus:outline-none focus:ring-1 focus:ring-mid-purple"
-                  style={{ backgroundColor: '#1a1a1a' }}
-                >
-                  <option value="" style={{ backgroundColor: '#1a1a1a' }}>Select</option>
-                  <option value="restaurant" style={{ backgroundColor: '#1a1a1a' }}>Restaurant</option>
-                  <option value="hotel" style={{ backgroundColor: '#1a1a1a' }}>Hotel</option>
-                  <option value="retail" style={{ backgroundColor: '#1a1a1a' }}>Retail</option>
-                  <option value="event" style={{ backgroundColor: '#1a1a1a' }}>Event</option>
-                  <option value="other" style={{ backgroundColor: '#1a1a1a' }}>Other</option>
-                </select>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="city" className="block text-white text-sm font-medium mb-2">
-                    City / State
-                  </label>
-                  <Input
-                    id="city"
-                    name="city"
-                    type="text"
-                    value={formData.city}
-                    onChange={handleChange}
-                    className="bg-[#1a1a1a] border-white/20 text-white placeholder:text-white/40 focus:border-mid-purple focus:bg-[#1a1a1a]"
-                    placeholder="Los Angeles, CA"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="timeline" className="block text-white text-sm font-medium mb-2">
-                    Timeline
-                  </label>
-                  <select
-                    id="timeline"
-                    name="timeline"
-                    value={formData.timeline || ''}
-                    onChange={handleChange}
-                    className="w-full bg-[#1a1a1a] border border-white/20 text-white rounded-md px-3 py-2 focus:border-mid-purple focus:outline-none focus:ring-1 focus:ring-mid-purple"
-                    style={{ backgroundColor: '#1a1a1a' }}
-                  >
-                    <option value="" style={{ backgroundColor: '#1a1a1a' }}>Select</option>
-                    <option value="immediate" style={{ backgroundColor: '#1a1a1a' }}>Immediate</option>
-                    <option value="1-3-months" style={{ backgroundColor: '#1a1a1a' }}>1–3 Months</option>
-                    <option value="3-6-months" style={{ backgroundColor: '#1a1a1a' }}>3–6 Months</option>
-                    <option value="planning" style={{ backgroundColor: '#1a1a1a' }}>Planning Stage</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-white text-sm font-medium mb-2">
-                  Tell Us About Your Project *
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  required
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5}
-                  className="bg-[#1a1a1a] border-white/20 text-white placeholder:text-white/40 focus:border-mid-purple focus:bg-[#1a1a1a] resize-none"
-                  placeholder="Describe your space, brand, or event..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="cta-button large w-full group disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? (
-                  <>
-                    <span>Sending...</span>
-                  </>
-                ) : (
-                  <>
-                    <span>Send Message</span>
-                    <Send size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                  </>
-                )}
-              </button>
-            </form>
+            <div className="bg-black/50 border border-white/10 rounded-lg p-8">
+  <iframe
+    data-tally-src="https://tally.so/embed/J92xJz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+    loading="lazy"
+    width="100%"
+    height="600"
+    frameBorder="0"
+    marginHeight="0"
+    marginWidth="0"
+    title="SOUNDWVV Home Contact Form"
+  ></iframe>
+</div>
           </div>
         </div>
       </div>
@@ -319,3 +178,4 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+
