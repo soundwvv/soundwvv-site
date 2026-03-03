@@ -123,7 +123,7 @@ const ServicesPage = () => {
                 WAVE
               </h3>
               <p style={{ fontSize: '15px', lineHeight: '1.6', color: 'rgba(255, 255, 255, 0.65)', marginBottom: '28px' }}>
-                A comprehensive sound partnership. Integrates expanded programming, custom mixes, and ongoing refinement into a fully managed system.
+                Integrates expanded programming and live elements to deliver our most comprehensive sound partnership.
               </p>
               <p className="text-white font-medium" style={{ fontSize: '13px', letterSpacing: '0.03em', marginBottom: '16px' }}>
                 Includes:

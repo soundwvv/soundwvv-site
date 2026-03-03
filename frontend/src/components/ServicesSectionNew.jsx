@@ -21,7 +21,7 @@ const ServicesSectionNew = () => {
     WAVE: {
       title: 'WAVE',
       subtitle: '– The Experience',
-      description: 'Integrates expanded programming and live elements to deliver our most comprehensive sound partnership.',
+      description: 'A fully developed sound environment — deeper programming, custom mixes, and evolving direction.',
       image: 'https://customer-assets.emergentagent.com/job_beat-space/artifacts/b47wwx7j_WAVE10.jpg'
     }
   };

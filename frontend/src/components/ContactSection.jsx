@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Mail, Phone, MapPin, CheckCircle } from 'lucide-react';
+import { Send, Mail, MapPin, CheckCircle } from 'lucide-react';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { useToast } from '../hooks/use-toast';
@@ -92,7 +92,7 @@ const ContactSection = () => {
           filter: 'blur(1px) saturate(0.7)'
         }}
       >
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       <div className="relative max-w-[1920px] mx-auto px-6 lg:px-8">
@@ -119,18 +119,6 @@ const ContactSection = () => {
                   <h4 className="text-white font-medium mb-1">Email</h4>
                   <a href="mailto:contact@soundwvv.com" className="text-mid-grey hover:text-white transition-colors">
                     contact@soundwvv.com
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-mid-pink/20 flex items-center justify-center flex-shrink-0">
-                  <Phone size={20} className="text-mid-pink" />
-                </div>
-                <div>
-                  <h4 className="text-white font-medium mb-1">Phone</h4>
-                  <a href="tel:+12347777777" className="text-mid-grey hover:text-white transition-colors">
-                    +1 (234) 777-7777
                   </a>
                 </div>
               </div>

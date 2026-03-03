@@ -1,5 +1,4 @@
 import React from 'react';
-import { Instagram, Facebook, Music } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,43 +10,14 @@ const Footer = () => {
           {/* Left: Brand */}
           <div>
             <h3 className="text-2xl font-bold text-white mb-4 tracking-wider">SOUNDWVV</h3>
-            <p className="text-mid-grey body-small mb-6">
+            <p className="text-mid-grey body-small">
               Music direction for brands and spaces.
             </p>
-            <div className="flex items-center gap-4">
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-dark-grey/20 flex items-center justify-center text-mid-grey hover:bg-mid-pink hover:text-white transition-all"
-                aria-label="Instagram"
-              >
-                <Instagram size={18} />
-              </a>
-              <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-dark-grey/20 flex items-center justify-center text-mid-grey hover:bg-mid-blue hover:text-white transition-all"
-                aria-label="Facebook"
-              >
-                <Facebook size={18} />
-              </a>
-              <a 
-                href="https://soundcloud.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-dark-grey/20 flex items-center justify-center text-mid-grey hover:bg-mid-orange hover:text-white transition-all"
-                aria-label="SoundCloud"
-              >
-                <Music size={18} />
-              </a>
-            </div>
           </div>
 
-          {/* Middle: Company */}
+          {/* Middle: Studio */}
           <div>
-            <h4 className="text-white font-medium mb-4 uppercase tracking-wider text-sm">Company</h4>
+            <h4 className="text-white font-medium mb-4 uppercase tracking-wider text-sm">Studio</h4>
             <ul className="space-y-3">
               <li>
                 <a href="#about" className="text-mid-grey hover:text-white transition-colors body-small">
@@ -74,11 +44,6 @@ const Footer = () => {
               <li>
                 <a href="mailto:contact@soundwvv.com" className="hover:text-white transition-colors">
                   contact@soundwvv.com
-                </a>
-              </li>
-              <li>
-                <a href="tel:+12347777777" className="hover:text-white transition-colors">
-                  +1 (234) 777-7777
                 </a>
               </li>
               <li className="pt-2">
