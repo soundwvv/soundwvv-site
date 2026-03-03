@@ -113,73 +113,19 @@ const ContactPage = () => {
               <p style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.6)' }}>We'll be in touch shortly.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit}>
-              <div style={{ padding: '40px', backgroundColor: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px' }}>
-                {/* Honeypot field - hidden from users, catches bots */}
-                <div style={{ position: 'absolute', left: '-9999px' }} aria-hidden="true">
-                  <input
-                    type="text"
-                    name="website"
-                    value={formData.website}
-                    onChange={handleChange}
-                    tabIndex={-1}
-                    autoComplete="off"
-                  />
-                </div>
-                
-                {error && (
-                  <div style={{ marginBottom: '24px', padding: '12px 16px', backgroundColor: 'rgba(255, 100, 100, 0.1)', border: '1px solid rgba(255, 100, 100, 0.3)', borderRadius: '4px', color: '#ff6464', fontSize: '14px' }}>
-                    {error}
-                  </div>
-                )}
-                
-                <div style={{ marginBottom: '24px' }}>
-                  <label style={labelStyles}>Full Name <span style={{ color: 'rgba(255, 255, 255, 0.3)' }}>*</span></label>
-                  <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required style={inputStyles} className="focus:border-white/30 focus:bg-white/[0.06]" data-testid="input-fullname" />
-                </div>
-                <div style={{ marginBottom: '24px' }}>
-                  <label style={labelStyles}>Company / Brand Name <span style={{ color: 'rgba(255, 255, 255, 0.3)' }}>*</span></label>
-                  <input type="text" name="companyName" value={formData.companyName} onChange={handleChange} required style={inputStyles} className="focus:border-white/30 focus:bg-white/[0.06]" data-testid="input-company" />
-                </div>
-                <div style={{ marginBottom: '24px' }}>
-                  <label style={labelStyles}>Email <span style={{ color: 'rgba(255, 255, 255, 0.3)' }}>*</span></label>
-                  <input type="email" name="email" value={formData.email} onChange={handleChange} required style={inputStyles} className="focus:border-white/30 focus:bg-white/[0.06]" data-testid="input-email" />
-                </div>
-                <div style={{ marginBottom: '24px' }}>
-                  <label style={labelStyles}>Space Type</label>
-                  <select name="spaceType" value={formData.spaceType} onChange={handleChange} style={{ ...inputStyles, cursor: 'pointer', appearance: 'none', backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.5)' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E\")", backgroundRepeat: 'no-repeat', backgroundPosition: 'right 16px center' }} className="focus:border-white/30 focus:bg-white/[0.06]" data-testid="select-spacetype">
-                    <option value="" style={{ backgroundColor: '#1a1a1a' }}>Select...</option>
-                    <option value="restaurant" style={{ backgroundColor: '#1a1a1a' }}>Restaurant</option>
-                    <option value="hotel" style={{ backgroundColor: '#1a1a1a' }}>Hotel</option>
-                    <option value="retail" style={{ backgroundColor: '#1a1a1a' }}>Retail</option>
-                    <option value="event" style={{ backgroundColor: '#1a1a1a' }}>Event</option>
-                    <option value="other" style={{ backgroundColor: '#1a1a1a' }}>Other</option>
-                  </select>
-                </div>
-                <div style={{ marginBottom: '24px' }}>
-                  <label style={labelStyles}>City / State</label>
-                  <input type="text" name="city" value={formData.city} onChange={handleChange} style={inputStyles} className="focus:border-white/30 focus:bg-white/[0.06]" data-testid="input-city" />
-                </div>
-                <div style={{ marginBottom: '24px' }}>
-                  <label style={labelStyles}>Timeline</label>
-                  <select name="timeline" value={formData.timeline} onChange={handleChange} style={{ ...inputStyles, cursor: 'pointer', appearance: 'none', backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.5)' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E\")", backgroundRepeat: 'no-repeat', backgroundPosition: 'right 16px center' }} className="focus:border-white/30 focus:bg-white/[0.06]" data-testid="select-timeline">
-                    <option value="" style={{ backgroundColor: '#1a1a1a' }}>Select...</option>
-                    <option value="immediate" style={{ backgroundColor: '#1a1a1a' }}>Immediate</option>
-                    <option value="1-3-months" style={{ backgroundColor: '#1a1a1a' }}>1–3 Months</option>
-                    <option value="3-6-months" style={{ backgroundColor: '#1a1a1a' }}>3–6 Months</option>
-                    <option value="planning" style={{ backgroundColor: '#1a1a1a' }}>Planning Stage</option>
-                  </select>
-                </div>
-                <div style={{ marginBottom: '32px' }}>
-                  <label style={labelStyles}>What are you looking for?</label>
-                  <textarea name="message" value={formData.message} onChange={handleChange} rows={4} style={{ ...inputStyles, resize: 'vertical', minHeight: '100px' }} className="focus:border-white/30 focus:bg-white/[0.06]" data-testid="textarea-message" />
-                </div>
-                <button type="submit" disabled={isSubmitting} data-testid="submit-btn" className="w-full group bg-white text-black py-3.5 rounded-full font-medium text-[13px] uppercase tracking-wider transition-all duration-[220ms] ease-out hover:shadow-[0_0_30px_rgba(255,255,255,0.15)] disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2">
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                  {!isSubmitting && <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />}
-                </button>
-              </div>
-            </form>
+            <<div className="bg-black/50 border border-white/10 rounded-lg p-8 max-w-xl mx-auto">
+  <iframe
+    src="https://tally.so/embed/LZdjry?alignLeft=1&hideTitle=1&transparentBackground=1"
+    loading="lazy"
+    width="100%"
+    height="750"
+    frameBorder="0"
+    marginHeight="0"
+    marginWidth="0"
+    title="SOUNDWVV Contact Page Form"
+    style={{ background: "transparent" }}
+  ></iframe>
+</div>
           )}
         </div>
       </section>
