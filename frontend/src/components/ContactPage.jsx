@@ -118,7 +118,7 @@ const ContactPage = () => {
     src="https://tally.so/embed/LZdjry?alignLeft=1&hideTitle=1&transparentBackground=1"
     loading="lazy"
     width="100%"
-    height="820"
+    height="900"
     frameBorder="0"
     marginHeight="0"
     marginWidth="0"
