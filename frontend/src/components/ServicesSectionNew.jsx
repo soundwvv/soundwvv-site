@@ -15,13 +15,13 @@ const ServicesSectionNew = () => {
     FLOW: {
       title: 'FLOW',
       subtitle: '– The Evolution',
-      description: 'Ongoing curation and refinement for hospitality, retail, and event venue environments.',
+      description: 'Ongoing music programming and refinement for hospitality, retail, and event venue environments.',
       image: 'https://customer-assets.emergentagent.com/job_08084b79-3026-4c9f-ad4a-3acbeed39eb1/artifacts/f65tayrz_caferestaurant.jpg'
     },
     WAVE: {
       title: 'WAVE',
       subtitle: '– The Experience',
-      description: 'A fully developed sound environment — deeper programming, custom mixes, and evolving direction.',
+      description: 'Integrates expanded programming and live elements to deliver our most comprehensive sound partnership.',
       image: 'https://customer-assets.emergentagent.com/job_beat-space/artifacts/b47wwx7j_WAVE10.jpg'
     }
   };

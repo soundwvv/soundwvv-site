@@ -143,7 +143,7 @@ const AboutPage = () => {
               marginBottom: '28px'
             }}
           >
-            Years of DJ performance and music curation across global spaces and brands shape the studio's perspective.
+            Years of global DJ performance and brand collaborations shape the studio's perspective and approach.
           </p>
           
           <p 
