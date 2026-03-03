@@ -113,7 +113,7 @@ const ContactPage = () => {
               <p style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.6)' }}>We'll be in touch shortly.</p>
             </div>
           ) : (
-            <<div className="bg-black/50 border border-white/10 rounded-lg p-8 max-w-xl mx-auto">
+            <div className="bg-black/50 border border-white/10 rounded-lg p-8 max-w-xl mx-auto">
   <iframe
     src="https://tally.so/embed/LZdjry?alignLeft=1&hideTitle=1&transparentBackground=1"
     loading="lazy"
