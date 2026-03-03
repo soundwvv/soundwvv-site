@@ -14,7 +14,7 @@ const AboutSection = () => {
             </h2>
             
             <p className="text-white/60 text-lg font-light leading-relaxed mb-6" style={{ maxWidth: '540px' }}>
-              SOUNDWVV is a DJ-led music studio curating sound for hospitality spaces, retail environments, brands, and live events. We approach music with structure and intention, guided by DJ expertise rather than automated playlists. We act as your music director — designing the sound of your space the same way a brand designer builds a visual identity. Each music program is developed to support the rhythm, atmosphere, and character of a space over time.
+              SOUNDWVV is a DJ-led music studio directing sound for hospitality spaces, retail environments, brands, and live events. We approach music with structure and intention, guided by DJ expertise rather than automated playlists. We act as your music director — designing the sound of your space the same way a brand designer builds a visual identity. Each music program is developed to support the rhythm, atmosphere, and character of a space over time.
             </p>
 
             {/* Styled CTA Button */}

@@ -157,7 +157,7 @@ const ContactPage = () => {
                   </select>
                 </div>
                 <div style={{ marginBottom: '24px' }}>
-                  <label style={labelStyles}>City / Location</label>
+                  <label style={labelStyles}>City / State</label>
                   <input type="text" name="city" value={formData.city} onChange={handleChange} style={inputStyles} className="focus:border-white/30 focus:bg-white/[0.06]" data-testid="input-city" />
                 </div>
                 <div style={{ marginBottom: '24px' }}>

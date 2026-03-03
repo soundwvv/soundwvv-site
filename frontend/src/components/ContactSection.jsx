@@ -244,7 +244,7 @@ const ContactSection = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="city" className="block text-white text-sm font-medium mb-2">
-                    City / Location
+                    City / State
                   </label>
                   <Input
                     id="city"
