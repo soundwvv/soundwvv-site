@@ -160,14 +160,15 @@ const ContactSection = () => {
 
             <div className="bg-black/50 border border-white/10 rounded-lg p-8">
   <iframe
-    data-tally-src="https://tally.so/embed/J92xJz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+    src="https://tally.so/embed/J92xJz?alignLeft=1&hideTitle=1&transparentBackground=1"
     loading="lazy"
     width="100%"
-    height="600"
+    height="700"
     frameBorder="0"
     marginHeight="0"
     marginWidth="0"
     title="SOUNDWVV Home Contact Form"
+    style={{ background: "transparent" }}
   ></iframe>
 </div>
           </div>
