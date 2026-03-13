@@ -28,26 +28,40 @@ const LoadingScreen = ({ onLoadingComplete }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-50 bg-black transition-opacity duration-[450ms] flex items-center justify-center ${
+      className={`fixed inset-0 z-50 transition-opacity duration-[450ms] ${
         isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
+      style={{ width: '100vw', height: '100vh' }}
     >
-      {!videoError ? (
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          playsInline
-          onError={handleVideoError}
-          className="w-full h-full object-cover transform scale-[0.7] md:scale-100"
-        >
-          <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/rip6bogn_soundwvv_preloader_final2.mp4" type="video/mp4" />
-        </video>
-      ) : (
-        <span className="text-white text-2xl md:text-3xl font-bold tracking-wider animate-pulse px-6">
-          SOUNDWVV
-        </span>
-      )}
+      {/* Layer 1: Full-screen star background */}
+      <div 
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: 'radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a0f 50%, #000000 100%)',
+          backgroundSize: 'cover'
+        }}
+      />
+      
+      {/* Layer 2: Centered logo/video */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        {!videoError ? (
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            playsInline
+            onError={handleVideoError}
+            className="w-[65%] h-auto md:w-full md:h-full md:object-cover"
+            style={{ maxWidth: '100vw' }}
+          >
+            <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/rip6bogn_soundwvv_preloader_final2.mp4" type="video/mp4" />
+          </video>
+        ) : (
+          <span className="text-white text-2xl md:text-3xl font-bold tracking-wider animate-pulse px-6">
+            SOUNDWVV
+          </span>
+        )}
+      </div>
     </div>
   );
 };
