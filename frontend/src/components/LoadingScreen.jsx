@@ -1,9 +1,19 @@
 import React, { useState, useRef, useEffect } from 'react';
 
+const DESKTOP_VIDEO = "https://customer-assets.emergentagent.com/job_beat-space/artifacts/rip6bogn_soundwvv_preloader_final2.mp4";
+const MOBILE_VIDEO = "https://customer-assets.emergentagent.com/job_d91838e6-2221-4b52-bbec-8bfd0dff6b70/artifacts/yax1cmwo_Untitled%20design%20%281%29.mp4";
+
 const LoadingScreen = ({ onLoadingComplete }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [videoError, setVideoError] = useState(false);
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 768);
   const videoRef = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     // Start fade out at 4.0 seconds (video is 4.5s long)
@@ -33,33 +43,26 @@ const LoadingScreen = ({ onLoadingComplete }) => {
       }`}
       style={{ width: '100vw', height: '100vh' }}
     >
-      {/* Layer 1: Full-screen star background */}
-      <div 
-        className="absolute inset-0 w-full h-full"
-        style={{
-          backgroundImage: 'radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a0f 50%, #000000 100%)',
-          backgroundSize: 'cover'
-        }}
-      />
-      
-      {/* Layer 2: Centered logo/video */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      {/* Full-screen video layer */}
+      <div className="absolute inset-0 w-full h-full">
         {!videoError ? (
           <video
             ref={videoRef}
+            key={isMobile ? 'mobile' : 'desktop'}
             autoPlay
             muted
             playsInline
             onError={handleVideoError}
-            className="w-[65%] h-auto md:w-full md:h-full md:object-cover"
-            style={{ maxWidth: '100vw' }}
+            className="w-full h-full object-cover"
           >
-            <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/rip6bogn_soundwvv_preloader_final2.mp4" type="video/mp4" />
+            <source src={isMobile ? MOBILE_VIDEO : DESKTOP_VIDEO} type="video/mp4" />
           </video>
         ) : (
-          <span className="text-white text-2xl md:text-3xl font-bold tracking-wider animate-pulse px-6">
-            SOUNDWVV
-          </span>
+          <div className="w-full h-full flex items-center justify-center bg-black">
+            <span className="text-white text-2xl md:text-3xl font-bold tracking-wider animate-pulse px-6">
+              SOUNDWVV
+            </span>
+          </div>
         )}
       </div>
     </div>
