@@ -39,7 +39,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
           muted
           playsInline
           onError={handleVideoError}
-          className="w-[75%] h-auto max-w-full md:w-full md:h-full object-contain md:object-cover"
+          className="w-full h-full object-cover transform scale-[0.7] md:scale-100"
         >
           <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/rip6bogn_soundwvv_preloader_final2.mp4" type="video/mp4" />
         </video>
