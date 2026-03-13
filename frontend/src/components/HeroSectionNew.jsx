@@ -29,7 +29,7 @@ const HeroSectionNew = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 lg:px-8 text-center">
-        <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-light mb-4 leading-tight tracking-tight">
+        <h1 className="text-white text-4xl md:text-7xl lg:text-8xl font-light mb-4 leading-tight tracking-tight">
           We design how your
           <br />
           brand sounds
