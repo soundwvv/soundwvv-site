@@ -39,16 +39,12 @@ const LoadingScreen = ({ onLoadingComplete }) => {
           muted
           playsInline
           onError={handleVideoError}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover'
-          }}
+          className="w-[75%] h-auto max-w-full md:w-full md:h-full object-contain md:object-cover"
         >
           <source src="https://customer-assets.emergentagent.com/job_beat-space/artifacts/rip6bogn_soundwvv_preloader_final2.mp4" type="video/mp4" />
         </video>
       ) : (
-        <span className="text-white text-3xl font-bold tracking-wider animate-pulse">
+        <span className="text-white text-2xl md:text-3xl font-bold tracking-wider animate-pulse px-6">
           SOUNDWVV
         </span>
       )}
