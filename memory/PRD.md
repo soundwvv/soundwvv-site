@@ -146,7 +146,9 @@ Build a website for "SOUNDWVV," a DJ-led studio focused on music direction and p
 - Separate video assets for mobile vs desktop loading screen
 - Desktop: original `soundwvv_preloader_final2.mp4` (unchanged)
 - Mobile (<768px): new uploaded MP4 with pre-scaled/centered logo
-- Full-screen `object-cover` on both, timing preserved (4s + 450ms fade)
+- Full-screen `object-cover` on both
+- Loading screen now waits for video `onEnded` event instead of hardcoded timer
+- 8s fallback timer for safety if video never fires ended
 - React `key` prop ensures correct video element on resize
 
 ## Environment Variables Required

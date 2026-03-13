@@ -15,25 +15,25 @@ const LoadingScreen = ({ onLoadingComplete }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const fadeOut = useRef(() => {});
+  fadeOut.current = () => {
+    if (!isLoading) return;
+    setIsLoading(false);
+    setTimeout(() => onLoadingComplete(), 450);
+  };
+
   useEffect(() => {
-    // Start fade out at 4.0 seconds (video is 4.5s long)
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-      setTimeout(() => {
-        onLoadingComplete();
-      }, 450); // 0.45s fade duration
-    }, 4000); // Start fading at 4.0 seconds
+    // Fallback: if video never fires 'ended' (e.g. load failure), exit after 8s
+    const fallback = setTimeout(() => fadeOut.current(), 8000);
+    return () => clearTimeout(fallback);
+  }, []);
 
-    return () => clearTimeout(timer);
-  }, [onLoadingComplete]);
+  const handleVideoEnded = () => fadeOut.current();
 
-  // Handle video error - skip loading immediately
   const handleVideoError = () => {
     setVideoError(true);
     setIsLoading(false);
-    setTimeout(() => {
-      onLoadingComplete();
-    }, 300);
+    setTimeout(() => onLoadingComplete(), 300);
   };
 
   return (
@@ -53,6 +53,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
             muted
             playsInline
             onError={handleVideoError}
+            onEnded={handleVideoEnded}
             className="w-full h-full object-cover"
           >
             <source src={isMobile ? MOBILE_VIDEO : DESKTOP_VIDEO} type="video/mp4" />
