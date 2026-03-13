@@ -35,7 +35,7 @@ const HeroSectionNew = () => {
           brand sounds
         </h1>
 
-        <p className="text-white/70 text-base md:text-lg font-light mb-12 tracking-wide">
+        <p className="text-white/70 text-xs md:text-lg font-light mb-12 tracking-wide">
           A DJ-led music curation studio for brands and spaces.
         </p>
 
