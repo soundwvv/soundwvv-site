@@ -29,10 +29,10 @@ const ServicesPage = () => {
               lineHeight: '1.55',
               color: 'rgba(255, 255, 255, 0.7)',
               fontWeight: '400',
-              maxWidth: '520px'
+              maxWidth: '640px'
             }}
           >
-            Three structured tiers designed to support and manage your brand's sound.
+            Each partnership starts with a focused 60-day implementation phase to define and build your sound system, then transitions into structured tiers that support and refine your brand's sound over time.
           </p>
         </div>
       </section>
