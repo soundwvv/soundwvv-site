@@ -37,7 +37,7 @@ const ServicesSectionNew = () => {
               Services
             </h2>
             <p className="text-white/60 text-lg font-light">
-              Tiered sound programs tailored to the needs of each space.
+              Structured sound programs tailored to each space, beginning with a strategic rollout implementation phase.
             </p>
           </div>
 
