@@ -36,7 +36,7 @@ const HeroSectionNew = () => {
         </h1>
 
         <p className="text-white/70 text-xs md:text-lg font-light mb-12 tracking-wide">
-          A DJ-led music curation studio for brands and spaces.
+          DJ-led music direction for brands and spaces.
         </p>
 
         <a 
