@@ -55,7 +55,7 @@ const ServicesPage = () => {
                 CORE
               </h3>
               <p style={{ fontSize: '15px', lineHeight: '1.6', color: 'rgba(255, 255, 255, 0.65)', marginBottom: '28px' }}>
-                Establishes a consistent sound system for your space. Defines direction, cadence, and tone through structured monthly programming.
+                Establishes a clear sound foundation for your space. Designed to keep it current and aligned without guesswork.
               </p>
               <p className="text-white font-medium" style={{ fontSize: '13px', letterSpacing: '0.03em', marginBottom: '16px' }}>
                 Includes:
@@ -63,15 +63,15 @@ const ServicesPage = () => {
               <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
                 <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '10px', paddingLeft: '16px', position: 'relative' }}>
                   <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
-                  One curated playlist per month
+                  One core playlist, actively managed
                 </li>
                 <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '10px', paddingLeft: '16px', position: 'relative' }}>
                   <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
-                  Custom sound identity consultation
+                  Monthly refinement and updates
                 </li>
                 <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', paddingLeft: '16px', position: 'relative' }}>
                   <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
-                  Monthly refresh and strategy check-in
+                  Ongoing oversight
                 </li>
               </ul>
             </div>
