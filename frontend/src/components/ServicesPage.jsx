@@ -21,7 +21,7 @@ const ServicesPage = () => {
               marginBottom: '18px'
             }}
           >
-            Partnerships
+            Service Partnerships
           </h1>
           <p 
             style={{ 
@@ -32,7 +32,19 @@ const ServicesPage = () => {
               maxWidth: '640px'
             }}
           >
-            Each partnership starts with a focused 60-day implementation phase to define and build your sound system, then transitions into structured tiers that support and refine your brand's sound over time.
+            Every SOUNDWVV partnership begins with an initial rollout to define, build, and refine your sound.
+          </p>
+          <p 
+            style={{ 
+              fontSize: '17px', 
+              lineHeight: '1.55',
+              color: 'rgba(255, 255, 255, 0.7)',
+              fontWeight: '400',
+              maxWidth: '640px',
+              marginTop: '12px'
+            }}
+          >
+            From there, we continue with ongoing music direction and refinement based on the level of support your space needs.
           </p>
         </div>
       </section>
