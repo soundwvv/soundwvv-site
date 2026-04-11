@@ -123,7 +123,7 @@ const ServicesPage = () => {
                 WAVE
               </h3>
               <p style={{ fontSize: '15px', lineHeight: '1.6', color: 'rgba(255, 255, 255, 0.65)', marginBottom: '28px' }}>
-                Integrates expanded programming and live elements to deliver our most comprehensive sound partnership.
+                Delivers a fully developed sound program across your space. Built for environments where sound plays a central role in the overall experience.
               </p>
               <p className="text-white font-medium" style={{ fontSize: '13px', letterSpacing: '0.03em', marginBottom: '16px' }}>
                 Includes:
@@ -131,19 +131,15 @@ const ServicesPage = () => {
               <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
                 <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '10px', paddingLeft: '16px', position: 'relative' }}>
                   <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
-                  Up to four rotating playlists per quarter
+                  Up to four rotating playlists
                 </li>
                 <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '10px', paddingLeft: '16px', position: 'relative' }}>
                   <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
-                  Up to two custom curated DJ mixes per quarter
-                </li>
-                <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', marginBottom: '10px', paddingLeft: '16px', position: 'relative' }}>
-                  <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
-                  Ongoing sound management and quarterly refinement
+                  Two custom DJ mixes
                 </li>
                 <li style={{ fontSize: '14px', lineHeight: '1.5', color: 'rgba(255, 255, 255, 0.6)', paddingLeft: '16px', position: 'relative' }}>
                   <span style={{ position: 'absolute', left: 0, color: 'rgba(255, 255, 255, 0.4)' }}>–</span>
-                  Dedicated partnership and priority response
+                  Ongoing sound management
                 </li>
               </ul>
             </div>
